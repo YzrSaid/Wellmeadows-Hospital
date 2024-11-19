@@ -1,0 +1,49 @@
+<!-- <?php
+session_start();
+?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellmeadow's Hospital</title>
+    <link rel="stylesheet" href="../css/styles.css?=v2">
+</head>
+
+<body>
+    <div class="login-wrapper">
+        <!-- Logo -->
+        <div class="logo-container">
+            <div class="logo-s">
+                <img src="../images/logo.jpg" alt="logo-icon">
+            </div>
+        </div>
+        <h1 id="login-title">Wellmeadow's Hospital</h1>
+        <!-- End of the Logo -->
+        <div class="container">
+            <div class="login-container">
+                <form action="../functions/login.php" method="post" class="login-form">
+                    <label for="username">Username</label>
+                    <input id="username" class="inner-input" type="text" name="username" required />
+                    <label for="password">Password <!-- <span><a class="forgot-pass-btn" href="#">Forgot Password?</a></span>--></label>
+                    <input id="password" class="inner-input" type="password" name="password" required />
+                    <button type="submit" name="Submit" class="login-btn">Log In</button>
+                    <!-- Display error message if set in session -->
+                    <!-- <?php
+                    if (isset($_SESSION['error'])) {
+                        echo "<p style='color: red; padding: 10px 5px'>" . $_SESSION['error'] . "</p>";
+                        unset($_SESSION['error']); // Clear the message after displaying
+                    }
+                    ?> -->
+                </form>
+            </div>
+            <div class="bottom-container">
+                <p>Don't have an account? <span><a href="signup.php">Sign Up.</a></span></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
