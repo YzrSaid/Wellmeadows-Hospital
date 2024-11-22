@@ -56,8 +56,14 @@
                                             <option value="Prefer not to say">Prefer not to say</option>
                                         </select>
                                     </div>
-                                </div>
 
+
+                                    <div class="row">
+                                        <label for="country">Clinic Num</label>
+                                        <input type="number" name="clinic-num">
+                                    </div>
+                                </div>
+                                    
                                 <div class="column">
                                     <!-- Last Name -->
                                     <div class="row">
