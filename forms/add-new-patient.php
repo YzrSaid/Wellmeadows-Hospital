@@ -24,23 +24,25 @@
                                     <!-- First Name -->
                                     <div class="row">
                                         <label for="first_name">First Name</label>
-                                        <input type="text" name="patient-first-name" id="first-name">
+                                        <input type="text" id="first_name">
                                     </div>
-                                </div>
+
+                                    <!-- Location -->
+                                    <div class="row">
+                                        <label for="street">Street</label>
+                                        <input type="text" id="street">
+                                    </div>
 
                                 <div class="column">
                                     <!-- Last Name -->
                                     <div class="row">
-                                        <label for="last_name">Last Name</label>
-                                        <input type="text" name="patient-last-name" id="last-name">
+                                        <label for="city">City</label>
+                                        <input type="text" id="city">
                                     </div>
-                                </div>
-                            </div>
-                            <div class="content-container">
-                                <div class="column">
-                                    <div class="row" style="width: 1100px; ">
-                                        <label for="address">Address</label>
-                                        <input type="text" name="patient-address" id="address">
+
+                                    <div class="row">
+                                        <label for="country">Country</label>
+                                        <input type="text" id="country">
                                     </div>
                                 </div>
                             </div>
@@ -49,7 +51,7 @@
                                     <!-- Marital Status -->
                                     <div class="row">
                                         <label for="marital-status">Marital Status</label>
-                                        <select name="patient-marital-status" id="marital-status">
+                                        <select id="marital-status">
                                             <option value="" disabled selected>Choose a status</option>
                                             <option value="Single">Single</option>
                                             <option value="Married">Married</option>
@@ -62,20 +64,22 @@
                                     <!-- Clinic Number -->
                                     <div class="row">
                                         <label for="country">Clinic Num</label>
-                                        <input type="number" name="patient-clinic-num" id="clinic-num">
+                                        <input type="number" name="clinic-num">
                                     </div>
-
-                                    <!-- Date of Birth -->
+                                </div>
+                                    
+                                <div class="column">
+                                    <!-- Last Name -->
                                     <div class="row">
-                                        <label for="date-of-birth">Date of Birth</label>
-                                        <input type="date" name="patient-date-of-birth" id="date-of-birth">
+                                        <label for="first_name">Last Name</label>
+                                        <input type="text" id="first_name">
                                     </div>
                                 </div>
                                 <div class="column">
                                     <!-- Gender -->
                                     <div class="row">
                                         <label for="gender">Gender</label>
-                                        <select name="patient-gender" id="gender">
+                                        <select id="gender">
                                             <option value="" disabled selected>Choose a gender</option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
@@ -85,13 +89,19 @@
                                     <!-- Phone -->
                                     <div class="row">
                                         <label for="phone-number">Phone Number</label>
-                                        <input type="tel" name="patient-phone-input" id="phone-input">
+                                        <input type="tel" id="phone-input">
                                     </div>
 
                                     <!-- Date Registered -->
                                     <div class="row">
                                         <label for="date-of-birth">Date Registered</label>
-                                        <input type="date" name="patient-date-of-birth" id="date-of-birth">
+                                        <input type="date" id="date-of-birth">
+                                    </div>
+
+                                    <!-- Date of Birth -->
+                                    <div class="row">
+                                        <label for="date-of-birth">Date of Birth</label>
+                                        <input type="date" id="date-of-birth">
                                     </div>
                                 </div>
                             </div>
@@ -230,9 +240,11 @@
             </div>
         </div>
     </div>
-
+   
     <!-- JS Script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/ajax.js"></script>
 </body>
 
 </html>
