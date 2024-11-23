@@ -35,29 +35,29 @@
                                     <!-- First Name -->
                                     <div class="row">
                                         <label for="first_name">First Name</label>
-                                        <input type="text" id="first_name">
+                                        <input type="text" name="patient_first_name" id="first_name">
                                     </div>
 
                                     <!-- Location -->
                                     <div class="row">
                                         <label for="street">Street</label>
-                                        <input type="text" id="street">
+                                        <input type="text" name="patient_street" id="street">
                                     </div>
 
                                     <div class="row">
                                         <label for="city">City</label>
-                                        <input type="text" id="city">
+                                        <input type="text" name="patient_city" id="city">
                                     </div>
 
                                     <div class="row">
                                         <label for="country">Country</label>
-                                        <input type="text" id="country">
+                                        <input type="text" name="patient_country" id="country">
                                     </div>
 
                                     <!-- Marital Status -->
                                     <div class="row">
                                         <label for="marital-status">Marital Status</label>
-                                        <select id="marital-status">
+                                        <select name="patient_m_status" id="marital-status">
                                             <option value="" disabled selected>Choose a status</option>
                                             <option value="Single">Single</option>
                                             <option value="Married">Married</option>
@@ -70,7 +70,7 @@
                                 <!-- Eto yung nadagdag -->
                                     <div class="row">
                                         <label for="country">Clinic Num</label>
-                                        <input type="number" name="clinic-num">
+                                        <input type="number" name="patient_clinic_num">
                                     </div>
                                 </div>
                                     
@@ -78,13 +78,13 @@
                                     <!-- Last Name -->
                                     <div class="row">
                                         <label for="first_name">Last Name</label>
-                                        <input type="text" id="first_name">
+                                        <input type="text" name="patient_last_name" id="first_name">
                                     </div>
 
                                     <!-- Gender -->
                                     <div class="row">
                                         <label for="gender">Gender</label>
-                                        <select id="gender">
+                                        <select name="patient_gender" id="gender">
                                             <option value="" disabled selected>Choose a gender</option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
@@ -94,19 +94,15 @@
                                     <!-- Phone -->
                                     <div class="row">
                                         <label for="phone-number">Phone Number</label>
-                                        <input type="tel" id="phone-input">
+                                        <input type="tel" name="patient_phone_num" id="phone-input">
                                     </div>
 
-                                    <!-- Date Registered -->
-                                    <div class="row">
-                                        <label for="date-of-birth">Date Registered</label>
-                                        <input type="date" id="date-of-birth">
-                                    </div>
+                                   
 
                                     <!-- Date of Birth -->
                                     <div class="row">
                                         <label for="date-of-birth">Date of Birth</label>
-                                        <input type="date" id="date-of-birth">
+                                        <input type="date" name="patient_date_of_birth" id="date-of-birth">
                                     </div>
                                 </div>
                             </div>
@@ -253,9 +249,11 @@
             </div>
         </div>
     </div>
-
+   
     <!-- JS Script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/ajax.js"></script>
 </body>
 
 </html>
