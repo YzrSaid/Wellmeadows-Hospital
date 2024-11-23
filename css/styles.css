@@ -218,11 +218,9 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 130%; /* Place it directly below the user icon */
-  left: 20%; /* Move the left edge to the center of the parent */
-  transform: translateX(
-    -50%
-  ); /* Offset by half its width to perfectly center */
+  top: 130%;
+  left: 10%;
+  transform: translateX(-50%);
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -231,9 +229,11 @@ body {
   transition: opacity 0.3s ease;
 }
 .dropdown-content a {
+  min-width: 180px;
   font-weight: bold;
   font-size: 14px;
   color: black;
+  margin: 0px;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -250,7 +250,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: #ff6f3b;
+  background-color: #e74c3c;
   color: white;
 }
 
@@ -268,7 +268,7 @@ body {
 .welcome-message {
   margin-top: 50px;
   width: 100%;
-  background-color: #f9dfd6;
+  background-color: #e74d3c34;
   padding: 3rem 12rem;
   height: 380px;
 }
@@ -326,8 +326,8 @@ body {
 
 .accordion-header {
   width: 100%;
-  background-color: #ff6f3b;
-  padding: 10px;
+  background-color: #e74c3c;
+  padding: 15px;
   padding-left: 20px;
   text-align: left;
   font-size: 14px;
@@ -338,6 +338,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
+  font-size: 15px;
   color: white;
   position: relative;
 }
@@ -480,7 +481,7 @@ select {
 .add-item-requisition-btn-container #add-item-requisition-btn,
 .create-requisition-btn-container #create-requisition-btn,
 .accept-requisition-btn-container #accept-requisition-btn {
-  background-color: #0c8882;
+  background-color: #575859;
   color: white;
   font-weight: bold;
   border: none;
@@ -501,7 +502,7 @@ select {
 .add-item-requisition-btn-container #add-item-requisition-btn:hover,
 .create-requisition-btn-container #create-requisition-btn:hover,
 .accept-requisition-btn-container #accept-requisition-btn:hover {
-  background-color: #10c8bf;
+  background-color: #202121;
   cursor: pointer;
 }
 .submit-bttns #clear-btn {
@@ -598,7 +599,7 @@ a {
   color: #333;
 }
 .waiting-list-table th {
-  background-color: #0c8882;
+  background-color: #575859;
   color: white;
   font-weight: bold;
   text-align: center;
@@ -654,43 +655,43 @@ a {
   color: #333;
 }
 .pharma-table th {
-  background-color: #0c8882;
+  background-color: #575859;
   color: white;
   font-weight: bold;
   text-align: center;
 }
 .surg-table th {
-  background-color: #0c8882;
+  background-color: #575859;
   color: white;
   font-weight: bold;
   text-align: center;
 }
 .patient-table th {
-  background-color: #0c8882;
+  background-color: #575859;
   color: white;
   font-weight: bold;
   text-align: center;
 }
 .supplier-table th {
-  background-color: #0c8882;
+  background-color: #575859;
   color: white;
   font-weight: bold;
   text-align: center;
 }
 .qualification-table th {
-  background-color: #0c8882;
+  background-color: #575859;
   color: white;
   font-weight: bold;
   text-align: center;
 }
 .work-experience-table th {
-  background-color: #0c8882;
+  background-color: #575859;
   color: white;
   font-weight: bold;
   text-align: center;
 }
 .local-doctor-table th {
-  background-color: #0c8882;
+  background-color: #575859;
   color: white;
   font-weight: bold;
   text-align: center;
@@ -701,7 +702,7 @@ a {
   transition: background-color 0.3s ease;
 }
 .pharma-table tbody tr.selected {
-  background-color: #0c88822f !important;
+  background-color: #5758592c !important;
   color: white !important;
 }
 .surg-table tr {
@@ -709,7 +710,7 @@ a {
   transition: background-color 0.3s ease;
 }
 .surg-table tbody tr.selected {
-  background-color: #0c88822f !important;
+  background-color: #5758592c !important;
   color: white !important;
 }
 .patient-table tr {
@@ -717,7 +718,7 @@ a {
   transition: background-color 0.3s ease;
 }
 .patient-table tbody tr.selected {
-  background-color: #0c88822f !important;
+  background-color: #5758592c !important;
   color: white !important;
 }
 .supplier-table tr {
@@ -725,7 +726,7 @@ a {
   transition: background-color 0.3s ease;
 }
 .supplier-table tbody tr.selected {
-  background-color: #0c88822f !important;
+  background-color: #5758592c;
   color: white !important;
 }
 .qualification-table tr {
@@ -733,7 +734,7 @@ a {
   transition: background-color 0.3s ease;
 }
 .qualification-table tbody tr.selected {
-  background-color: #0c88822f !important;
+  background-color: #5758592c !important;
   color: white !important;
 }
 .work-experience-table tr {
@@ -741,7 +742,7 @@ a {
   transition: background-color 0.3s ease;
 }
 .work-experience-table tbody tr.selected {
-  background-color: #0c88822f !important;
+  background-color: #5758592c !important;
   color: white !important;
 }
 .local-doctor-table tr {
@@ -749,7 +750,7 @@ a {
   transition: background-color 0.3s ease;
 }
 .local-doctor-table tbody tr.selected {
-  background-color: #0c88822f !important;
+  background-color: #5758592c !important;
   color: white !important;
 }
 
@@ -869,7 +870,7 @@ select option[value=""] {
   height: 30px;
   font-size: 16px;
   color: white;
-  background-color: #696969;
+  background-color: #575859;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -881,16 +882,17 @@ select option[value=""] {
 }
 
 .container2 {
+  display: none;
   width: 80%;
   justify-self: center;
-  background-color: #10c8bf1f;
+  background-color: #5758592c;
   padding: 20px;
   margin-bottom: 30px;
 }
 .container2-title {
-  padding-left: 130px;
   color: #555;
   font-weight: 900;
+  margin-top: -30px;
 }
 
 #address {
@@ -900,4 +902,28 @@ select option[value=""] {
 #supplier-name {
   width: 780px;
   margin-right: 50px;
+}
+
+#close-btn {
+  top: 520px;
+  left: 1230px;
+  display: flex;
+  justify-self: end;
+  padding: 0px 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  transition: background-color 0.3s ease;
+}
+
+#close-btn:hover {
+  background-color: darkred;
 }

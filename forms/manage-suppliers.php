@@ -94,10 +94,11 @@
                                     </table>
                                 </div>
                             </div>
-
                             <!-- View and Update Container -->
-                            <h4 class="container2-title">Supplier Information</h4> <br>
                             <div class="container2">
+                                <!-- Close Button -->
+                                <button class="close-btn" id="close-btn">x</button>
+                                <h4 class="container2-title">Supplier Information</h4> <br>
 
                                 <!-- Supplier Number -->
                                 <div class="content-container">
@@ -112,7 +113,7 @@
                                 <!-- Supplier Name -->
                                 <div class="content-container">
                                     <div class="column">
-                                        <div class="row" style="width: 970px;">   
+                                        <div class="row" style="width: 970px;">
                                             <label for="patient-name">Supplier Name</label>
                                             <input type="text" name="supplier-name" id="supplier-name" value="Shenzheng Sorting Center" readonly>
                                         </div>
@@ -151,6 +152,7 @@
                                     <button type="button" id="conduct-appointment-btn">Edit</button>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

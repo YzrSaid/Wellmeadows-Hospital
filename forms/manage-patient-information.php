@@ -169,8 +169,11 @@
                             </div>
 
                             <!-- View and Update Container -->
-                            <h4 class="container2-title">Patient Information</h4> <br>
                             <div class="container2">
+                                <!-- Close Button -->
+                                <button class="close-btn" id="close-btn">x</button>
+
+                                <h4 class="container2-title">Patient Information</h4> <br>
 
                                 <!-- Patient Number -->
                                 <div class="content-container">

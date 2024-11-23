@@ -2,7 +2,7 @@
  <nav class="navbar">
         <div class="logo">
             <a href="../forms/homepage.php" style="display: flex; align-items: center; gap: 8px;">
-                <img src="../images/logo.jpg" alt="logo-img" class="index-logo-img">
+                <img src="../images/logo.png" alt="logo-img" class="index-logo-img">
                 <h6>Wellmeadows Hospital</h6>
             </a>
         </div>

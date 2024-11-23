@@ -61,7 +61,7 @@
                     <!-- Manage Staff Work Experience-->
                     <div class="accordion-item">
                         <button class="accordion-header">Manage Staff Work Experience</button>
-                        <div class="accordion-content" style="padding: 0px 10px;"> <br>
+                        <div class="accordion-content" id="accordion-content-open" style="padding: 0px 10px;"> <br>
                             <!-- Searchbox and sort btn -->
                             <div class="search">
                                 <div class="search-container">
@@ -157,9 +157,11 @@
                             </div>
 
                             <!-- View and Update Container -->
-                            <h4 class="container2-title">Staff Work Experience</h4> <br>
                             <div class="container2">
+                                <!-- Close Button -->
+                                <button class="close-btn" id="close-btn">x</button>
 
+                                <h4 class="container2-title">Staff Work Experience</h4> <br>
                                 <!-- Work Exp Number -->
                                 <div class="content-container">
                                     <div class="column" style="width: 45%;">
