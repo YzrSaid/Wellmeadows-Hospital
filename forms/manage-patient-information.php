@@ -217,28 +217,15 @@
 
                                 <!-- Patient Address-->
                                 <div class="content-container">
-                                    <!-- Patient Address -->
-                                    <div class="column" style="width: 1800px;">
+                                    <div class="column" style="width: 64.5%">
                                         <div class="row">
-                                            <label for="addr">Address</label>
+                                            <label for="address">Address</label>
                                         </div>
-                                        <div class="row">
-                                            <input type="text" id="street" value="Sampaloc Drive" readonly style="width: 220px;">
-                                            <input type="text" id="barangay" value="Talon-Talon" readonly style="width: 220px;">
-                                            <input type="text" id="city" value="Zamboanga City" readonly style="width: 220px;">
-                                            <input type="text" id="country" value="Philippines" readonly style="width: 220px;">
-                                        </div>
-                                        <div class="row" style="width: 100%; margin-left: 0px; margin-top: -10px;">
-                                            <label for="street/purok" style="font-size: 12px; font-weight: normal; margin-left: 58px">Street/Purok</label>
-                                            <label for="barangay" style="font-size: 12px; font-weight: normal; margin-left: -20px;">Barangay</label>
-                                            <label for="city" style="font-size: 12px; font-weight: normal; margin-right: 20px;">City</label>
-                                            <label for="country" style="font-size: 12px; font-weight: normal; margin-right: 70px;">Country</label>
+                                        <div class="row" style="width: 715px;">
+                                            <input type="text" name="patient-address" id="address">
                                         </div>
                                     </div>
-                                </div>
 
-                                <!--  Marital Status, Date of Birth, Tel. Number -->
-                                <div class="content-container">
                                     <!-- Patient Marital Status -->
                                     <div class="column">
                                         <div class="row">
@@ -255,7 +242,10 @@
                                             </select>
                                         </div>
                                     </div>
+                                </div>
 
+                                <!--  Marital Status, Date of Birth, Tel. Number -->
+                                <div class="content-container" style="width: 67%;">
                                     <!-- Date of Birth -->
                                     <div class="column">
                                         <div class="row">
@@ -298,7 +288,7 @@
                                             <input type="text" id="next-of-kin" value="Colette Vergara-Said (ID: 00031)">
                                         </div>
                                     </div>
-                                    <div class="column">
+                                    <div class="column" style="margin-left: 30px;">
                                         <!-- Referred By -->
                                         <div class="row">
                                             <label for="next-of-kin">Referred By</label>

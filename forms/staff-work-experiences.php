@@ -27,13 +27,13 @@
                                     <!-- Name of Org -->
                                     <div class="row">
                                         <label for="name-org-org">Name of Org</label>
-                                        <input type="text" id="name-of-org">
+                                        <input type="text" name="name-of-org" id="name-of-org">
                                     </div>
 
                                     <!-- Start of Date -->
                                     <div class="row">
                                         <label for="start-of-date">Start of Date</label>
-                                        <input type="date" id="start-of-date">
+                                        <input type="date" name="start-of-date" id="start-of-date">
                                     </div>
                                 </div>
 
@@ -42,13 +42,13 @@
                                     <!-- Position -->
                                     <div class="row">
                                         <label for="position">Position</label>
-                                        <input type="text" id="position">
+                                        <input type="text" name="position" id="position">
                                     </div>
 
                                     <!-- End of Date -->
                                     <div class="row">
                                         <label for="end-of-date">End of Date</label>
-                                        <input type="date" id="end-of-date">
+                                        <input type="date" name="end-of-date" id="end-of-date">
                                     </div>
                                 </div>
                             </div> <br> <br>
@@ -165,7 +165,7 @@
                                     <div class="column" style="width: 45%;">
                                         <div class="row">
                                             <label for="work-exp-num">Work Exp Number</label>
-                                            <input type="number" id="work-exp-number" readonly style="margin-right: 20px;">
+                                            <input type="number" name="work-exp-number" id="work-exp-number" readonly style="margin-right: 20px;">
                                         </div>
                                     </div>
                                 </div>
@@ -175,7 +175,7 @@
                                     <div class="column" style="width: 45%;">
                                         <div class="row">
                                             <label for="staff-num">Staff Number</label>
-                                            <input type="number" id="staff-number" readonly style="margin-right: 20px;">
+                                            <input type="number" name="staff-number" id="staff-number" readonly style="margin-right: 20px;">
                                         </div>
                                     </div>
                                 </div>
@@ -188,13 +188,13 @@
                                         <!-- Name of Org -->
                                         <div class="row">
                                             <label for="name-org-org">Name of Org</label>
-                                            <input type="text" id="name-of-org">
+                                            <input type="text" name="name-of-org" id="name-of-org">
                                         </div>
 
                                         <!-- Start of Date -->
                                         <div class="row">
                                             <label for="start-of-date">Start of Date</label>
-                                            <input type="date" id="start-of-date">
+                                            <input type="date" name="start-of-date" id="start-of-date">
                                         </div>
                                     </div>
 
@@ -203,13 +203,13 @@
                                         <!-- Position -->
                                         <div class="row">
                                             <label for="position">Position</label>
-                                            <input type="text" id="position">
+                                            <input type="text" name="position" id="position">
                                         </div>
 
                                         <!-- End of Date -->
                                         <div class="row">
                                             <label for="end-of-date">End of Date</label>
-                                            <input type="date" id="end-of-date">
+                                            <input type="date" name="end-of-date" id="end-of-date">
                                         </div>
 
                                     </div>

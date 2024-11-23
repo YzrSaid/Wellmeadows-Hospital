@@ -63,7 +63,7 @@
                                                 <td>12/10/2002</td>
 
                                                 <!-- Exit Date -->
-                                                <td><input type="date" id="exit-date"></td>
+                                                <td><input type="date" name="exit-date" id="exit-date"></td>
 
                                                 <!-- Bed -->
                                                 <td><select name="bed" id="bed">
@@ -132,7 +132,7 @@
                                                 <td>12/10/2002</td>
 
                                                 <!-- Exit Date -->
-                                                <td><input type="date" id="exit-date"></td>
+                                                <td><input type="date" name="exit-date" id="exit-date"></td>
 
                                                 <!-- Bed -->
                                                 <td><select name="bed" id="bed">

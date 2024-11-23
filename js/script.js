@@ -162,7 +162,7 @@ if (patientExaminationRadios.length > 0) {
   console.warn("No radio buttons found with the name 'examination'.");
 }
 
-// This is for highligting a row in the table whenever user clicks an item (pharma-table)
+// This is for highlighting a row in the table whenever user clicks an item (pharma-table)
 document.querySelectorAll(".pharma-table tbody tr").forEach((row) => {
   row.addEventListener("click", function () {
     // Remove 'selected' class from all rows
@@ -175,7 +175,7 @@ document.querySelectorAll(".pharma-table tbody tr").forEach((row) => {
   });
 });
 
-// This is for highligting a row in the table whenever user clicks an item (surg-table)
+// This is for highlighting a row in the table whenever user clicks an item (surg-table)
 document.querySelectorAll(".surg-table tbody tr").forEach((row) => {
   row.addEventListener("click", function () {
     // Remove 'selected' class from all rows
@@ -188,7 +188,7 @@ document.querySelectorAll(".surg-table tbody tr").forEach((row) => {
   });
 });
 
-// This is for highligting a row in the table whenever user clicks an item (non-surg-table)
+// This is for highlighting a row in the table whenever user clicks an item (non-surg-table)
 document.querySelectorAll(".non-surg-table tbody tr").forEach((row) => {
   row.addEventListener("click", function () {
     // Remove 'selected' class from all rows
@@ -201,7 +201,7 @@ document.querySelectorAll(".non-surg-table tbody tr").forEach((row) => {
   });
 });
 
-// This is for highligting a row in the table whenever user clicks an item (supplier-table)
+// This is for highlighting a row in the table whenever user clicks an item (supplier-table)
 document.querySelectorAll(".patient-table tbody tr").forEach((row) => {
   row.addEventListener("click", function () {
     // Remove 'selected' class from all rows
@@ -214,7 +214,7 @@ document.querySelectorAll(".patient-table tbody tr").forEach((row) => {
   });
 });
 
-// This is for highligting a row in the table whenever user clicks an item (supplier-table)
+// This is for highlighting a row in the table whenever user clicks an item (supplier-table)
 document.querySelectorAll(".supplier-table tbody tr").forEach((row) => {
   row.addEventListener("click", function () {
     // Remove 'selected' class from all rows
@@ -227,16 +227,28 @@ document.querySelectorAll(".supplier-table tbody tr").forEach((row) => {
   });
 });
 
-// This is for highligting a row in the table whenever user clicks an item (qualification-table)
+// This is for highlighting a row in the table whenever user clicks an item (qualification-table)
 document.querySelectorAll(".qualification-table tbody tr").forEach((row) => {
-    row.addEventListener("click", function () {
-      // Remove 'selected' class from all rows
-      document.querySelectorAll(".qualification-table tbody tr").forEach((r) => {
-        r.classList.remove("selected");
-      });
-  
-      // Add 'selected' class to the clicked row
-      this.classList.add("selected");
+  row.addEventListener("click", function () {
+    // Remove 'selected' class from all rows
+    document.querySelectorAll(".qualification-table tbody tr").forEach((r) => {
+      r.classList.remove("selected");
     });
+
+    // Add 'selected' class to the clicked row
+    this.classList.add("selected");
   });
-  
+});
+
+// This is for highlighting a row in the table whenever user clicks an item (local-doctor-table)
+document.querySelectorAll(".local-doctor-table tbody tr").forEach((row) => {
+  row.addEventListener("click", function () {
+    // Remove 'selected' class from all rows
+    document.querySelectorAll(".local-doctor-table tbody tr").forEach((r) => {
+      r.classList.remove("selected");
+    });
+
+    // Add 'selected' class to the clicked row
+    this.classList.add("selected");
+  });
+});

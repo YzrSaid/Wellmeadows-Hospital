@@ -108,46 +108,34 @@
                                         </div>
                                     </div>
                                 </div>
- 
+
                                 <!-- Supplier Name -->
                                 <div class="content-container">
-                                    <!-- Patient Name -->
-                                    <div class="column" style="width: 57.5%;">
-                                        <div class="row">
+                                    <div class="column">
+                                        <div class="row" style="width: 970px;">   
                                             <label for="patient-name">Supplier Name</label>
-                                            <input type="text" id="first-name" value="Shenzheng Sorting Center" readonly style="width: 450px;">
+                                            <input type="text" name="supplier-name" id="supplier-name" value="Shenzheng Sorting Center" readonly>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Supplier Address-->
                                 <div class="content-container">
-                                    <div class="column" style="width: 1800px;">
-                                        <div class="row">
-                                            <label for="addr">Address</label>
-                                        </div>
-                                        <div class="row">
-                                            <input type="text" id="supplier-street" value="Sampaloc Drive" readonly style="width: 220px;">
-                                            <input type="text" id="supplier-barangay" value="Talon-Talon" readonly style="width: 220px;">
-                                            <input type="text" id="supplier-city" value="Zamboanga City" readonly style="width: 220px;">
-                                            <input type="text" id="supplier-country" value="Philippines" readonly style="width: 220px;">
-                                        </div>
-                                        <div class="row" style="width: 100%; margin-left: 0px; margin-top: -10px;">
-                                            <label for="street/purok" style="font-size: 12px; font-weight: normal; margin-left: 58px">Street/Purok</label>
-                                            <label for="barangay" style="font-size: 12px; font-weight: normal; margin-left: -20px;">Barangay</label>
-                                            <label for="city" style="font-size: 12px; font-weight: normal; margin-right: 20px;">City</label>
-                                            <label for="country" style="font-size: 12px; font-weight: normal; margin-right: 70px;">Country</label>
+                                    <div class="column">
+                                        <div class="row" style="width: 970px;">
+                                            <label for="address">Address</label>
+                                            <input style="margin-left: 83px;" type="text" name="supplier-address" id="address">
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Supplier Tel. Number and Supplier Fax Number -->
                                 <div class="content-container">
-                                     <!-- Supplier Tel. Number -->
-                                     <div class="column">
+                                    <!-- Supplier Tel. Number -->
+                                    <div class="column">
                                         <div class="row">
                                             <label for="supplier-tel-number">Tel. Number</label>
-                                            <input type="tel" id="supplier-tel-number" value="+63 935 826 8263">
+                                            <input type="tel" style="margin-right: 20px;" name="supplier-tel-number" id="supplier-tel-number" value="+63 935 826 8263">
                                         </div>
                                     </div>
 
@@ -155,7 +143,7 @@
                                     <div class="column">
                                         <div class="row">
                                             <label for="supplier-fax-number">Fax Number</label>
-                                            <input type="number" id="supplier-fax-number" value="00022412">
+                                            <input type="number" name="supplier-fax-number" id="supplier-fax-number" value="00022412">
                                         </div>
                                     </div>
                                 </div> <br>
