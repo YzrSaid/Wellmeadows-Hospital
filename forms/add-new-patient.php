@@ -11,6 +11,16 @@
     <!-- Nav bar component -->
     <?php include '../components/navbar.php'; ?>
 
+
+    <!-- Ipasok mo sa form elements mga forms kase naka div lang lahat,  then pa change ako ng mga id attribute into name attribute yung sa mga input element kase name attribute yung ginagamit ng php pang reference sa data -->
+
+    <!-- Then may dinagdag ako na input dito sa patient form kase yung sa entities and attributes ni juls may fk dun ng clinic num na naka reference sa doctor so kailangan ata mag input ng clinic num kase di man pwede mag auto increment ang fk -->
+    
+    <!-- Then yung sa date registered wag na ata natin lagyan ng input i auto add nalang yung sa sql same lang man date and time kung kailan iaadd ng user yung form na yun -->
+
+    <!-- Tas yung sa address di kase siya separate yung sa entities and attributes ni juls kaya naguguluhan ako kung iaadd ko lahat sa sql yung mga input form na yun, kung pwede isahin nalang natin yung address like parang textarea? -->
+
+    
     <div class="wrapper">
         <div class="container">
             <h1>Add a Patient</h1>
@@ -57,7 +67,7 @@
                                         </select>
                                     </div>
 
-
+                                <!-- Eto yung nadagdag -->
                                     <div class="row">
                                         <label for="country">Clinic Num</label>
                                         <input type="number" name="clinic-num">
