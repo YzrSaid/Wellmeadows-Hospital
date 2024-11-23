@@ -56,7 +56,7 @@
                                     <!-- Quantity -->
                                     <div class="row">
                                         <label for="drug-quantity">Quantity</label>
-                                        <input type="number" id="drug-quantity">
+                                        <input type="number" name="drug-quantity" id="drug-quantity">
                                     </div>
                                 </div>
                                 <div class="column">

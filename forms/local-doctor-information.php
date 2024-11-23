@@ -27,24 +27,7 @@
                                     <!-- First Name -->
                                     <div class="row">
                                         <label for="first_name">First Name</label>
-                                        <input type="text" id="first_name">
-                                    </div>
-
-                                    <!-- Location -->
-                                    <div class="row">
-                                        <label for="street">Street</label>
-                                        <input type="text" id="street">
-                                    </div>
-
-                                    <div class="row">
-                                        <label for="country">Country</label>
-                                        <input type="text" id="country">
-                                    </div>
-
-                                    <!-- Phone -->
-                                    <div class="row">
-                                        <label for="phone-number">Phone Number</label>
-                                        <input type="tel" id="phone-input">
+                                        <input type="text" name="local-doctor-first-name" id="first-name">
                                     </div>
                                 </div>
 
@@ -52,26 +35,26 @@
                                 <div class="column">
                                     <!-- Last Name -->
                                     <div class="row">
-                                        <label for="first_name">Last Name</label>
-                                        <input type="text" id="first_name">
+                                        <label for="last-name">Last Name</label>
+                                        <input type="text" name="local-doctor-last-name" id="last-name">
                                     </div>
-
-                                    <!-- City -->
-                                    <div class="row">
-                                        <label for="city">City</label>
-                                        <input type="text" id="city">
+                                </div>
+                            </div>
+                            <!-- Local Doctor Address -->
+                            <div class="content-container">
+                                <div class="column">
+                                    <div class="row" style="width: 1100px; ">
+                                        <label for="address">Address</label>
+                                        <input type="text" name="local-doctor-address" id="address">
                                     </div>
-
-                                    <!-- Postal Code -->
+                                </div>
+                            </div>
+                            <div class="content-container">
+                                <div class="column">
+                                    <!-- Phone -->
                                     <div class="row">
-                                        <label for="postal-code">Postal Code</label>
-                                        <input type="number" id="postal-code">
-                                    </div>
-
-                                    <!-- Clinic Number -->
-                                    <div class="row">
-                                        <label for="clinig-number">Clinic Number</label>
-                                        <input style="width: 100px; margin-right: 150px;" type="number" id="clinic-number">
+                                        <label for="phone-number">Phone Number</label>
+                                        <input type="tel" name="local-doctor-phone-input" id="phone-input">
                                     </div>
                                 </div>
                             </div>
@@ -85,11 +68,99 @@
                     <div class="accordion-item">
                         <button class="accordion-header">Edit Doctor</button>
                         <div class="accordion-content"> <br>
-                            <h4>Edit Local Doctor</h4>
+                            <h4>Choose a Local Doctor</h4> <br>
                             <div class="content-container">
-                                <!-- First Column -->
-                                <div class="column">
+                                <div class="column" style="width:30%;">
+                                    <!-- Doctor -->
+                                    <div class="row">
+                                        <label for="doctor-referred">Local Doctors: </label>
+                                        <select id="local-doctors" name="local-doctors">
+                                            <!-- options from db -->
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-container">
+                                <div class="table-container">
+                                    <table class="local-doctor-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Clinic #</th>
+                                                <th>Doctor Name</th>
+                                                <th>Address</th>
+                                                <th>Phone Number</th>
+                                            </tr>
+                                        </thead>
 
+                                        <tbody>
+                                            <tr>
+                                                <!-- Clinic Number -->
+                                                <td>0001</td>
+
+                                                <!-- Doctor Name -->
+                                                <td>Doctor KwakKwak</td>
+
+                                                <!-- Address -->
+                                                <td>Sampaloc Drive, Talon-Talon, Zamboanga City, Philippines</td>
+
+                                                <!-- Phone Number -->
+                                                <td>+63 35 826 8263</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- View and Update Container -->
+                            <h4 class="container2-title">Supplier Information</h4> <br>
+                            <div class="container2">
+                                <!-- Clinic Number -->
+                                <div class="content-container">
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="supplier-num">Clinic Number</label>
+                                            <input type="number" id="clinic-number" value="0001" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="content-container">
+                                    <!-- Doctor Name -->
+                                    <div class="column" style="width: 87%;">
+                                        <div class="row" style="width: 88%;">
+                                            <label for="patient-name"> Name</label>
+                                            <input type="text" name="doctor-first-name" id="first-name" value="Aldrin" readonly style="width: 250px;">
+                                            <input type="text" name="doctor-last-name" id="last-name" value="Said" readonly style="width: 250px;">
+                                        </div>
+                                        <div class="row" style="width: 50%; margin-left: 220px; margin-top: -10px;">
+                                            <label for="first-name" style="font-size: 12px; font-weight: normal;">First Name</label>
+                                            <label for="last-name" style="font-size: 12px; font-weight: normal;">Last Name</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Doctor Address-->
+                                <div class="content-container">
+                                    <div class="column">
+                                        <div class="row" style="width: 880px; ">
+                                            <label for="address">Address</label>
+                                            <input style="margin-left: 60px;" type="text" name="local-doctor-address" id="address">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Doctor Phone Number -->
+                                <div class="content-container">
+                                    <!-- Doctor Phone Number -->
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="local-doctor-phone-number">Phone Number</label>
+                                            <input type="tel" name="local-doctor-phone-number" id="local-doctor-phone-number" value="+63 935 826 8263">
+                                        </div>
+                                    </div>
+                                </div> <br>
+                                <div class="conduct-appointment-btn-container">
+                                    <button type="button" id="conduct-appointment-btn">Edit</button>
                                 </div>
                             </div>
                         </div>

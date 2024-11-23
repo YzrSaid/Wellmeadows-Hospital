@@ -27,37 +27,32 @@
                                     <!-- First Name -->
                                     <div class="row">
                                         <label for="first_name">First Name</label>
-                                        <input type="text" id="first_name">
-                                    </div>
-
-                                    <!-- Location -->
-                                    <div class="row">
-                                        <label for="street">Street</label>
-                                        <input type="text" id="street">
-                                    </div>
-
-                                    <div class="row">
-                                        <label for="city">City</label>
-                                        <input type="text" id="city">
-                                    </div>
-
-                                    <div class="row">
-                                        <label for="country">Country</label>
-                                        <input type="text" id="country">
+                                        <input type="text" name="staff-first-name" id="first-name">
                                     </div>
                                 </div>
 
                                 <div class="column">
                                     <!-- Last Name -->
                                     <div class="row">
-                                        <label for="first_name">Last Name</label>
-                                        <input type="text" id="first_name">
+                                        <label for="last-name">Last Name</label>
+                                        <input type="text" name="staff-last-name" id="last-name">
                                     </div>
-
+                                </div>
+                            </div>
+                            <div class="content-container">
+                                <div class="column">
+                                    <div class="row" style="width: 1100px; ">
+                                        <label for="address">Address</label>
+                                        <input type="text" name="staff-address" id="address">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-container">
+                                <div class="column">
                                     <!-- Gender -->
                                     <div class="row">
                                         <label for="gender">Gender</label>
-                                        <select id="gender">
+                                        <select id="gender" name="staff-gender">
                                             <option value="" disabled selected>Choose a gender</option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
@@ -67,17 +62,18 @@
                                     <!-- Phone -->
                                     <div class="row">
                                         <label for="phone-number">Phone Number</label>
-                                        <input type="tel" id="phone-input">
+                                        <input type="tel" name="staff-phone-input" id="phone-input">
                                     </div>
-
+                                </div>
+                                <div class="column">
                                     <!-- Date of Birth -->
                                     <div class="row">
                                         <label for="date-of-birth">Date of Birth</label>
-                                        <input type="date" id="date-of-birth">
+                                        <input type="date" name="staff-date-of-birth" id="date-of-birth">
                                     </div>
                                 </div>
-
                             </div>
+
                             <h4 style="color: #0c8882;">Employment Details</h4> <br>
                             <div class="content-container">
                                 <!-- Insurance Number and Position -->
@@ -85,13 +81,19 @@
                                     <!-- Insurance Number -->
                                     <div class="row">
                                         <label for="insurance-number">Insurance Number</label>
-                                        <input type="number" id="insurance-number">
+                                        <input type="number" name="staff-insurance-number" id="staff-insurance-number">
                                     </div>
 
                                     <!-- Salary Scale -->
                                     <div class="row">
                                         <label for="salary-scale">Salary Scale</label>
-                                        <input type="text">
+                                        <select name="salary-scale" id="salary-scale">
+                                            <option value="" disabled selected>Choose salary scale</option>
+                                            <option value="15,000 - 20,000">15,000 - 20,000</option>
+                                            <option value="20,000 - 30,000">20,000 - 30,000</option>
+                                            <option value="30,000 - 40,000">30,000 - 40,000</option>
+                                            <option value="40, 000 - Above">40, 000 - Above</option>
+                                        </select>
                                     </div>
                                 </div>
 
@@ -99,7 +101,7 @@
                                     <!-- Position -->
                                     <div class="row">
                                         <label for="position">Position</label>
-                                        <select name="position" id="position">
+                                        <select name="staff-position" id="position">
                                             <option value="" disabled selected>Choose a position</option>
                                             <option value="Medical Doctor">Medical Doctor</option>
                                             <option value="Personnel Officer">Personal Officer</option>
@@ -111,7 +113,7 @@
                                     <!-- Current Salary -->
                                     <div class="row">
                                         <label for="current-salary">Current Salary</label>
-                                        <input type="number" id="current-salary">
+                                        <input type="number" id="current-salary" name="staff-current-salary">
                                     </div>
                                 </div>
                             </div>
@@ -140,7 +142,7 @@
                                     <!-- Number of Hours -->
                                     <div class="row">
                                         <label for="number-of-hours">Number of Hours</label>
-                                        <input type="number" id="number-of-hours" style="width: 55%;">
+                                        <input type="number" name="number-of-hours" id="number-of-hours" style="width: 55%;">
                                     </div>
 
                                 </div>

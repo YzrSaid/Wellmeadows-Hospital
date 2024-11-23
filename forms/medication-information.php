@@ -40,7 +40,7 @@
                                     <!-- Start Date -->
                                     <div class="row">
                                         <label for="start-date">Start Date</label>
-                                        <input type="date" id="start-date" style="margin-right: 250px;">
+                                        <input type="date" name="start-date" id="start-date" style="margin-right: 250px;">
                                     </div>
                                 </div>
                                 <div class="column" style="width: 40%">
@@ -55,7 +55,7 @@
                                     <!-- End Date -->
                                     <div class="row">
                                         <label for="end-date">End Date</label>
-                                        <input type="date" id="end-date">
+                                        <input type="date" name="end-date" id="end-date">
                                     </div>
                                 </div>
                             </div>

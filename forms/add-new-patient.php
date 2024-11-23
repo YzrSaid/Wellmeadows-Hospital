@@ -10,17 +10,6 @@
 <body>
     <!-- Nav bar component -->
     <?php include '../components/navbar.php'; ?>
-
-
-    <!-- Ipasok mo sa form elements mga forms kase naka div lang lahat,  then pa change ako ng mga id attribute into name attribute yung sa mga input element kase name attribute yung ginagamit ng php pang reference sa data -->
-
-    <!-- Then may dinagdag ako na input dito sa patient form kase yung sa entities and attributes ni juls may fk dun ng clinic num na naka reference sa doctor so kailangan ata mag input ng clinic num kase di man pwede mag auto increment ang fk -->
-    
-    <!-- Then yung sa date registered wag na ata natin lagyan ng input i auto add nalang yung sa sql same lang man date and time kung kailan iaadd ng user yung form na yun -->
-
-    <!-- Tas yung sa address di kase siya separate yung sa entities and attributes ni juls kaya naguguluhan ako kung iaadd ko lahat sa sql yung mga input form na yun, kung pwede isahin nalang natin yung address like parang textarea? -->
-
-    
     <div class="wrapper">
         <div class="container">
             <h1>Add a Patient</h1>
@@ -35,29 +24,32 @@
                                     <!-- First Name -->
                                     <div class="row">
                                         <label for="first_name">First Name</label>
-                                        <input type="text" id="first_name">
+                                        <input type="text" name="patient-first-name" id="first-name">
                                     </div>
+                                </div>
 
-                                    <!-- Location -->
+                                <div class="column">
+                                    <!-- Last Name -->
                                     <div class="row">
-                                        <label for="street">Street</label>
-                                        <input type="text" id="street">
+                                        <label for="last_name">Last Name</label>
+                                        <input type="text" name="patient-last-name" id="last-name">
                                     </div>
-
-                                    <div class="row">
-                                        <label for="city">City</label>
-                                        <input type="text" id="city">
+                                </div>
+                            </div>
+                            <div class="content-container">
+                                <div class="column">
+                                    <div class="row" style="width: 1100px; ">
+                                        <label for="address">Address</label>
+                                        <input type="text" name="patient-address" id="address">
                                     </div>
-
-                                    <div class="row">
-                                        <label for="country">Country</label>
-                                        <input type="text" id="country">
-                                    </div>
-
+                                </div>
+                            </div>
+                            <div class="content-container">
+                                <div class="column">
                                     <!-- Marital Status -->
                                     <div class="row">
                                         <label for="marital-status">Marital Status</label>
-                                        <select id="marital-status">
+                                        <select name="patient-marital-status" id="marital-status">
                                             <option value="" disabled selected>Choose a status</option>
                                             <option value="Single">Single</option>
                                             <option value="Married">Married</option>
@@ -67,24 +59,23 @@
                                         </select>
                                     </div>
 
-                                <!-- Eto yung nadagdag -->
+                                    <!-- Clinic Number -->
                                     <div class="row">
                                         <label for="country">Clinic Num</label>
-                                        <input type="number" name="clinic-num">
-                                    </div>
-                                </div>
-                                    
-                                <div class="column">
-                                    <!-- Last Name -->
-                                    <div class="row">
-                                        <label for="first_name">Last Name</label>
-                                        <input type="text" id="first_name">
+                                        <input type="number" name="patient-clinic-num" id="clinic-num">
                                     </div>
 
+                                    <!-- Date of Birth -->
+                                    <div class="row">
+                                        <label for="date-of-birth">Date of Birth</label>
+                                        <input type="date" name="patient-date-of-birth" id="date-of-birth">
+                                    </div>
+                                </div>
+                                <div class="column">
                                     <!-- Gender -->
                                     <div class="row">
                                         <label for="gender">Gender</label>
-                                        <select id="gender">
+                                        <select name="patient-gender" id="gender">
                                             <option value="" disabled selected>Choose a gender</option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
@@ -94,26 +85,20 @@
                                     <!-- Phone -->
                                     <div class="row">
                                         <label for="phone-number">Phone Number</label>
-                                        <input type="tel" id="phone-input">
+                                        <input type="tel" name="patient-phone-input" id="phone-input">
                                     </div>
 
                                     <!-- Date Registered -->
                                     <div class="row">
                                         <label for="date-of-birth">Date Registered</label>
-                                        <input type="date" id="date-of-birth">
-                                    </div>
-
-                                    <!-- Date of Birth -->
-                                    <div class="row">
-                                        <label for="date-of-birth">Date of Birth</label>
-                                        <input type="date" id="date-of-birth">
+                                        <input type="date" name="patient-date-of-birth" id="date-of-birth">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-header">Next-of-Kin Details</button>
+                        <button class="accordion-header">Next-of-Kin Information</button>
                         <div class="accordion-content"> <br>
                             <h4>Next-of-Kin Details</h4> <br>
                             <div class="content-container">
@@ -121,28 +106,7 @@
                                     <!-- First Name -->
                                     <div class="row">
                                         <label for="first_name">First Name</label>
-                                        <input type="text" id="first_name">
-                                    </div>
-
-                                    <!-- Address -->
-                                    <div class="row">
-                                        <label for="street">Street/Purok</label>
-                                        <input type="text" id="street">
-                                    </div>
-
-                                    <div class="row">
-                                        <label for="barangay">Barangay</label>
-                                        <input type="text" id="barangay">
-                                    </div>
-                  
-                                    <div class="row">
-                                        <label for="city">City</label>
-                                        <input type="text" id="city">
-                                    </div>
-
-                                    <div class="row">
-                                        <label for="country">Country</label>
-                                        <input type="text" id="country">
+                                        <input type="text" name="kin-first-name" id="first-name">
                                     </div>
                                 </div>
 
@@ -150,13 +114,30 @@
                                     <!-- Last Name -->
                                     <div class="row">
                                         <label for="first_name">Last Name</label>
-                                        <input type="text" id="first_name">
+                                        <input type="text" name="kin-last-name" id="last-name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-container">
+                                <div class="column">
+                                    <div class="row" style="width: 1100px; ">
+                                        <label for="address">Address</label>
+                                        <input type="text" name="kin-address" id="address">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-container">
+                                <div class="column">
+                                    <!-- Date of Birth -->
+                                    <div class="row">
+                                        <label for="date-of-birth">Date of Birth</label>
+                                        <input type="date" name="kin-date-of-birth" id="kin-date-of-birth">
                                     </div>
 
-                                    <!-- Gender -->
+                                    <!-- Relationship with the patient -->
                                     <div class="row">
                                         <label for="relationship">Relationship</label>
-                                        <select id="relationship">
+                                        <select name="kin-relationship" id="relationship">
                                             <option value="" disabled selected>Relationship with the patient</option>
                                             <option value="Spouse">Spouse</option>
                                             <option value="Parent">Parent</option>
@@ -170,33 +151,29 @@
                                     <div class="row-special">
                                         <label id="other-relationship-label" for="other-relationship">If others, please specify:</label>
                                         <input type="text" id="other-relationship" name="other-relationship" disabled>
-                                    </div>
-
-                                    <!-- Phone -->
+                                    </div> <br>
+                                </div>
+                                <div class="column">
+                                    <!-- Phone Number-->
                                     <div class="row">
                                         <label for="phone-number">Phone Number</label>
-                                        <input type="tel" id="phone-input">
-                                    </div>
-
-                                    <!-- Date of Birth -->
-                                    <div class="row">
-                                        <label for="date-of-birth">Date of Birth</label>
-                                        <input type="date" id="date-of-birth">
+                                        <input type="tel" name="kin-phone-input" id="phone-input">
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                     <div class="accordion-item">
                         <button class="accordion-header">Local Doctor Referral</button>
                         <div class="accordion-content"> <br>
-                            <h4>Select a Local Doctor That Referred Patient</h4> <br>
+                            <h4>Choose a Local Doctor That Referred the Patient</h4> <br>
                             <div class="content-container">
                                 <div class="column" style="width:30%;">
                                     <!-- Doctor -->
                                     <div class="row">
                                         <label for="doctor-referred">Local Doctors: </label>
-                                        <select id="relationship">
+                                        <select id="local-doctors" name="local-doctors">
                                             <!-- options from db -->
                                         </select>
                                     </div>
@@ -219,15 +196,15 @@
                                     <!-- Exam Room -->
                                     <div class="row">
                                         <label for="doctor-referred">Exam Room </label>
-                                        <input type="text" id="exam-room">
+                                        <input type="text" name="exam-room" id="exam-room">
                                     </div>
                                 </div>
                                 <div class="column" style="width: 30%;">
-                                    <!-- Apppointment Date and Time -->
+                                    <!-- Appointment Date and Time -->
                                     <div class="row">
                                         <label for="appointment-date-and-time">Appointment</label>
-                                        <input type="time" id="appointment-time">
-                                        <input type="date" id="appointment-date">
+                                        <input type="time" name="appointment-time" id="appointment-time">
+                                        <input type="date" name="appointment-date" id="appointment-date">
                                     </div>
                                 </div>
                             </div>

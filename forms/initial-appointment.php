@@ -54,22 +54,22 @@
                                     <!-- Exam Room -->
                                     <div class="row">
                                         <label for="exam-room">Exam Room</label>
-                                        <input type="text" id="exam-room" readonly value="E102">
+                                        <input type="text" name="exam-room" id="exam-room" readonly value="E102">
                                     </div>
                                 </div>
                                 <div class="column" style="width: 45%;">
                                     <!-- Appointment Date and Time -->
                                     <div class="row">
                                         <label for="appt">Appointment</label>
-                                        <input type="date" id="appt-date" readonly value="2002-12-10">
-                                        <input type="time" id="appt-time" readonly value="14:30">
+                                        <input type="date" name="appt-date" id="appt-date" readonly value="2002-12-10">
+                                        <input type="time" name="appt-time" id="appt-time" readonly value="14:30">
                                     </div>
                                 </div>
                                 <div class="column">
                                     <!-- Staff -->
                                     <div class="row">
                                         <label for="staff">Staff</label>
-                                        <input type="number" id="staff-number" readonly style="width: 60%;" value="1002">
+                                        <input type="number" name="staff-number" id="staff-number" readonly style="width: 60%;" value="1002">
                                     </div>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@
 
                                 <div class="column">
                                     <div class="row">
-                                        <input type="date" id="appt-date-out">
+                                        <input type="date" name="appt-date-out" id="appt-date-out">
                                     </div>
                                 </div>
 
@@ -113,7 +113,7 @@
 
                                 <div class="column">
                                     <div class="row">
-                                        <input type="time" id="appt-time-out">
+                                        <input type="time" name="appt-time-out" id="appt-time-out">
                                     </div>
                                 </div>
                             </div>
@@ -135,7 +135,7 @@
                                 <div class="column" style="width: 60%;">
                                     <div class="row">
                                         <label for="planned-exit-date">Planned Exit Date</label>
-                                        <input type="date" id="planned-edit-date">
+                                        <input type="date" name="planned-edit-date" id="planned-edit-date">
                                     </div>
                                 </div>
                             </div>

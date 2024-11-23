@@ -27,14 +27,14 @@
                                     <!-- Qualification Type -->
                                     <div class="row">
                                         <label for="qualification-type">Type/Program</label>
-                                        <input type="text" id="qualification-type" style="width: 55%;">
+                                        <input type="text" name="qualification-type" id="qualification-type" style="width: 55%;">
                                     </div>
                                 </div>
                                 <div class="column">
                                     <!-- Date of Qualification -->
                                     <div class="row">
                                         <label for="date-for-qualification">Qualification Date</label>
-                                        <input type="date" id="date-of-qualification" style="width: 55%;">
+                                        <input type="date" name="date-of-qualification" id="date-of-qualification" style="width: 55%;">
                                     </div>
 
                                 </div>
@@ -42,7 +42,7 @@
                                     <!-- Institute Name -->
                                     <div class="row">
                                         <label for="institute-name">Institute Name</label>
-                                        <input type="text" id="institute-name" style="width: 55%;">
+                                        <input type="text" name="institute-name" id="institute-name" style="width: 55%;">
                                     </div>
                                 </div>
                             </div> <br> <br>
@@ -179,7 +179,7 @@
                                     <div class="column" style="width: 45%;">
                                         <div class="row">
                                             <label for="qualification-num">Qualification Number</label>
-                                            <input type="number" id="qualification-number" readonly style="margin-right: 20px;">
+                                            <input type="number" name="qualification-number" id="qualification-number" readonly style="margin-right: 20px;">
                                         </div>
                                     </div>
                                 </div>
@@ -189,7 +189,7 @@
                                     <div class="column" style="width: 45%;">
                                         <div class="row">
                                             <label for="staff-num">Staff Number</label>
-                                            <input type="number" id="staff-number" readonly style="margin-right: 20px;">
+                                            <input type="number" name="staff-number" id="staff-number" readonly style="margin-right: 20px;">
                                         </div>
                                     </div>
                                 </div>
@@ -203,7 +203,7 @@
                                             <label for="type/program">Type/Program</label>
                                         </div>
                                         <div class="row">
-                                            <input type="text" id="type/program" readonly>
+                                            <input type="text" name="name/program" id="type/program" readonly>
                                         </div>
                                     </div>
                                     <!-- Qualification Date -->
@@ -212,7 +212,7 @@
                                             <label for="qualification-date">Qualification Date</label>
                                         </div>
                                         <div class="row">
-                                            <input type="date" id="qualification-date" readonly>
+                                            <input type="date" name="qualification-date" id="qualification-date" readonly>
                                         </div>
                                     </div>
 
@@ -222,7 +222,7 @@
                                             <label for="institute-name">Institute Name</label>
                                         </div>
                                         <div class="row">
-                                            <input type="text" id="institute-name" readonly>
+                                            <input type="text" name="institute-name" id="institute-name" readonly>
                                         </div>
                                     </div>
                                 </div>

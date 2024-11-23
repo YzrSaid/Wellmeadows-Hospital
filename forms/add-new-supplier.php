@@ -26,7 +26,7 @@
                                 <div class="column">
                                     <div class="row">
                                         <label for="supplier_name">Supplier Name</label>
-                                        <input type="text" id="supplier_name">
+                                        <input type="text" name="supplier-name" id="supplier-name">
                                     </div>
                                 </div>
 
@@ -34,28 +34,17 @@
                                 <div class="column">
                                     <div class="row">
                                         <label for="supplier-email">Supplier Email</label>
-                                        <input type="date" id="supplier-email">
+                                        <input type="date" name="supplier-email" id="supplier-email">
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Supplier Address -->
                             <div class="content-container">
-                                <div class="column" style="width: 1800px;">
-                                    <div class="row">
-                                        <label for="supplier-addr">Supplier Address</label>
-                                    </div>
-                                    <div class="row">
-                                        <input type="text" id="supplier-street" style="width: 220px;">
-                                        <input type="text" id="supplier-barangay" style="width: 220px;">
-                                        <input type="text" id="supplier-city" style="width: 220px;">
-                                        <input type="text" id="supplier-country" style="width: 220px;">
-                                    </div>
-                                    <div class="row" style="width: 100%; margin-left: 0px; margin-top: -10px;">
-                                        <label for="supplier-street/purok" style="font-size: 12px; font-weight: normal; margin-left: 65px">Street/Purok</label>
-                                        <label for="supplier-barangay" style="font-size: 12px; font-weight: normal; margin-left: -10px;">Barangay</label>
-                                        <label for="supplier-city" style="font-size: 12px; font-weight: normal; margin-right: 20px;">City</label>
-                                        <label for="supplier-country" style="font-size: 12px; font-weight: normal; margin-right: 80px;">Country</label>
+                                <div class="column">
+                                    <div class="row" style="width: 1100px; ">
+                                        <label for="address">Address</label>
+                                        <input type="text" name="supplier-address" id="address" style="width: 733px; margin-right: 238px;">
                                     </div>
                                 </div>
                             </div>
@@ -66,7 +55,7 @@
                                 <div class="column">
                                     <div class="row">
                                         <label for="supplier-tel-num">Tel. Number</label>
-                                        <input type="tel" id="supplier-tel-num">
+                                        <input type="tel" name="supplier-tel-num" id="supplier-tel-num">
                                     </div>
                                 </div>
 
@@ -74,7 +63,7 @@
                                 <div class="column">
                                     <div class="row">
                                         <label for="supplier-fax-num">Fax Number</label>
-                                        <input type="number" id="supplier-fax-num">
+                                        <input type="number" name="supplier-fax-num" id="supplier-fax-num">
                                     </div>
                                 </div>
                             </div> <br>
