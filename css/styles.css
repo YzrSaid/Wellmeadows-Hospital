@@ -570,6 +570,10 @@ a {
   width: 100%;
   border-collapse: collapse;
 }
+.non-surg-table {
+  width: 100%;
+  border-collapse: collapse;
+}
 .supplier-table {
   width: 100%;
   border-collapse: collapse;
@@ -618,6 +622,13 @@ a {
 }
 .surg-table th,
 .surg-table td {
+  padding: 10px;
+  border: 1px solid #333;
+  text-align: center;
+  color: #333;
+}
+.non-surg-table th,
+.non-surg-table td {
   padding: 10px;
   border: 1px solid #333;
   text-align: center;
@@ -677,6 +688,12 @@ a {
   font-weight: bold;
   text-align: center;
 }
+.non-surg-table th {
+  background-color: #575859;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
 .patient-table th {
   background-color: #575859;
   color: white;
@@ -727,6 +744,14 @@ a {
   transition: background-color 0.3s ease;
 }
 .surg-table tbody tr.selected {
+  background-color: #5758592c !important;
+  color: white !important;
+}
+.non-surg-table tr {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.non-surg-table tbody tr.selected {
   background-color: #5758592c !important;
   color: white !important;
 }

@@ -33,7 +33,8 @@ headers.forEach((header) => {
   header.addEventListener("click", () => {
     const content = header.nextElementSibling;
 
-    const container = document.querySelector(".container2");
+    // Get all container2 elements
+    const containers = document.querySelectorAll(".container2");
 
     // Close all other accordion items
     document.querySelectorAll(".accordion-content").forEach((item) => {
@@ -45,11 +46,14 @@ headers.forEach((header) => {
     // Toggle the clicked accordion item
     if (content.style.maxHeight) {
       content.style.maxHeight = null; // Close the clicked accordion
-      // hide the container2
-      container.style.display = "none";
 
-      // Deselect any selected rows in the table that corresponds to this container
-      deselectTableRow(container);
+      // Hide all container2 elements
+      containers.forEach((container) => {
+        container.style.display = "none";
+      });
+
+      // Deselect any selected rows in the tables associated with each container
+      containers.forEach((container) => deselectTableRow(container));
     } else {
       content.style.maxHeight = content.scrollHeight + "px"; // Open the clicked accordion
     }
@@ -169,7 +173,7 @@ if (patientExaminationRadios.length > 0) {
   console.warn("No radio buttons found with the name 'examination'.");
 }
 
-// This is for highlighting a row in the table whenever user clicks an item (pharma-table)
+// This is for highlighting a row in the table whenever a user clicks an item (pharma-table)
 document.querySelectorAll(".pharma-table tbody tr").forEach((row) => {
   row.addEventListener("click", function () {
     // Remove 'selected' class from all rows
@@ -179,10 +183,21 @@ document.querySelectorAll(".pharma-table tbody tr").forEach((row) => {
 
     // Add 'selected' class to the clicked row
     this.classList.add("selected");
+
+    // Make the .accordion-content big enough to allow the container fit
+    const accordionContent = document.querySelector("#accordion-content-1");
+
+    accordionContent.style.maxHeight = "fit-content";
+    // Show the container
+    const container = document.querySelector("#container2-1");
+    if (container) {
+      // Set container visibility
+      container.style.cssText = "display: block;";
+    }
   });
 });
 
-// This is for highlighting a row in the table whenever user clicks an item (surg-table)
+// This is for highlighting a row in the table whenever a user clicks an item (surg-table)
 document.querySelectorAll(".surg-table tbody tr").forEach((row) => {
   row.addEventListener("click", function () {
     // Remove 'selected' class from all rows
@@ -192,10 +207,21 @@ document.querySelectorAll(".surg-table tbody tr").forEach((row) => {
 
     // Add 'selected' class to the clicked row
     this.classList.add("selected");
+
+    // Make the .accordion-content big enough to allow the container fit
+    const accordionContent = document.querySelector("#accordion-content-2");
+
+    accordionContent.style.maxHeight = "fit-content";
+    // Show the container
+    const container = document.querySelector("#container2-2");
+    if (container) {
+      // Set container visibility
+      container.style.cssText = "display: block;";
+    }
   });
 });
 
-// This is for highlighting a row in the table whenever user clicks an item (non-surg-table)
+// This is for highlighting a row in the table whenever a user clicks an item (surg-table)
 document.querySelectorAll(".non-surg-table tbody tr").forEach((row) => {
   row.addEventListener("click", function () {
     // Remove 'selected' class from all rows
@@ -205,9 +231,19 @@ document.querySelectorAll(".non-surg-table tbody tr").forEach((row) => {
 
     // Add 'selected' class to the clicked row
     this.classList.add("selected");
+
+    // Make the .accordion-content big enough to allow the container fit
+    const accordionContent = document.querySelector("#accordion-content-3");
+
+    accordionContent.style.maxHeight = "fit-content";
+    // Show the container
+    const container = document.querySelector("#container2-3");
+    if (container) {
+      // Set container visibility
+      container.style.cssText = "display: block;";
+    }
   });
 });
-
 // This is for highlighting a row in the table whenever a user clicks an item (supplier-table)
 document.querySelectorAll(".supplier-table tbody tr").forEach((row) => {
   row.addEventListener("click", function () {
@@ -386,18 +422,21 @@ function initializeCloseButton() {
   });
 }
 
-// Function to deselect any selected row in the table associated with the container
+// Function to deselect any selected row in all relevant tables within the container
 function deselectTableRow(container) {
-  // Find the table within the same container
-  const table = container
+  // Find all tables within the same wrapper
+  const tables = container
     .closest(".wrapper")
-    .querySelector(
-      ".supplier-table, .patient-table, .work-experience-table, .qualification-table, .ward-table"
+    .querySelectorAll(
+      ".supplier-table, .patient-table, .work-experience-table, .qualification-table, .ward-table, .pharma-table, .surg-table, .non-surg-table"
     ); // Add class selectors for other tables
-  if (table) {
-    // Deselect any selected rows in the table
-    table.querySelectorAll("tbody tr.selected").forEach((row) => {
-      row.classList.remove("selected");
+
+  if (tables.length) {
+    // Iterate through each table and deselect any selected rows
+    tables.forEach((table) => {
+      table.querySelectorAll("tbody tr.selected").forEach((row) => {
+        row.classList.remove("selected");
+      });
     });
   }
 }

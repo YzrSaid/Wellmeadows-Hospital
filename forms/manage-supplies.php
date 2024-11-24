@@ -19,7 +19,7 @@
                     <!-- Pharmaceutical Supplies -->
                     <div class="accordion-item">
                         <button class="accordion-header">Pharmaceutical Supplies</button>
-                        <div class="accordion-content" style="padding: 0px 10px;"> <br>
+                        <div class="accordion-content" id="accordion-content-1" style="padding: 0px 10px;"> <br>
                             <!-- Searchbox and sort btn -->
                             <div class="search">
                                 <div class="search-container">
@@ -266,23 +266,108 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="content-container" style="padding-left: 180px;">
+                            <div class="content-container" style="padding-left: 135px;">
                                 <!-- For Description and Method of Administration -->
                                 <div class="column">
                                     <div class="row">
                                         <label for="description">Description</label>
                                     </div>
                                     <div class="row">
-                                        <textarea name="phar-supply-description" id="phar-supply-descriptipn" readonly></textarea>
+                                        <textarea name="phar-supply-description" id="phar-supply-description" readonly></textarea>
                                     </div>
                                 </div>
-                                <div class="column">
+                                <div class="column" style="margin-left: 80px;">
                                     <div class="row">
                                         <label for="method-admin">Method of Administration</label>
                                     </div>
                                     <div class="row">
                                         <textarea name="phar-method-admin" id="phar-method-admin" readonly></textarea>
                                     </div>
+                                </div>
+                            </div> <br>
+
+                            <!-- View and Update Container -->
+                            <div class="container2" id="container2-1">
+                                <!-- Close Button -->
+                                <button class="close-btn" id="close-btn">x</button>
+                                <h4 class="container2-title">Ward Information</h4> <br>
+
+                                <div class="content-container" style="width: 100%;">
+                                    <!-- Drug Name -->
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="drug-name">Drug Name</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="text" name="drug-name" id="drug-name">
+                                        </div>
+                                    </div>
+
+                                    <!-- Dosage -->
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="dosage">Dosage</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="text" name="dosage" id="dosage">
+                                        </div>
+                                    </div>
+
+                                    <!-- Quantity Stock -->
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="quantity-stock">Quantity Stock</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="number" name="quantity-stock" id="quantity-stock">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Re-order level and Cost Per Unit -->
+                                <div class="content-container" style="width: 68%;">
+                                    <!-- Re-order level -->
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="re-order-level">Re-order Level</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="number" name="re-order-level" id="re-order-level">
+                                        </div>
+                                    </div>
+
+                                    <!-- Cost Per Unit -->
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="cost-per-unit">Cost Per Unit</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="number" name="cost-per-unit" id="cost-per-unit">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="content-container">
+                                    <!-- For Description and Method of Administration -->
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="description">Description</label>
+                                        </div>
+                                        <div class="row">
+                                            <textarea name="phar-supply-description" id="phar-supply-description" readonly></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="method-admin">Method of Administration</label>
+                                        </div>
+                                        <div class="row">
+                                            <textarea name="phar-method-admin" id="phar-method-admin"></textarea>
+                                        </div>
+                                    </div>
+                                </div> <br>
+                                <div class="conduct-appointment-btn-container">
+                                    <button type="button" id="conduct-appointment-btn">Edit</button>
                                 </div>
                             </div>
                         </div>
@@ -291,7 +376,7 @@
                     <!-- Surgical Supplies -->
                     <div class="accordion-item">
                         <button class="accordion-header">Surgical Supplies</button>
-                        <div class="accordion-content" style="padding: 0px 10px;"> <br>
+                        <div class="accordion-content" id="accordion-content-2" style="padding: 0px 10px;"> <br>
                             <!-- Searchbox and sort btn -->
                             <div class="search">
                                 <div class="search-container">
@@ -359,15 +444,83 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="content-container" style="padding-left: 180px;">
+                            <div class="content-container" style="padding-left: 133px;">
                                 <!-- For Description -->
                                 <div class="column" style="width: 100%;">
                                     <div class="row">
                                         <label for="description">Description</label>
                                     </div>
                                     <div class="row">
-                                        <textarea name="surg-supply-description" id="surg-supply-description" readonly></textarea>
+                                        <textarea name="surg-supply-description" id="surg-supply-description" readonly style="width: 1065px;"></textarea>
                                     </div>
+                                </div>
+                            </div> <br>
+
+                            <!-- View and Update Container -->
+                            <div class="container2" id="container2-2">
+                                <!-- Close Button -->
+                                <button class="close-btn" id="close-btn">x</button>
+                                <h4 class="container2-title">Surgical Supply Information</h4> <br>
+
+                                <!-- Surg Name and Quantity Stock -->
+                                <div class="content-container" style="width: 100%;">
+                                    <!-- Non-surg name -->
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="surg-name">Item Name</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="text" name="surg-name" id="surg-name">
+                                        </div>
+                                    </div>
+
+                                    <!-- Quantity Stock -->
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="quantity-stock">Quantity Stock</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="number" name="quantity-stock" id="quantity-stock">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Re-order level and Cost Per Unit -->
+                                <div class="content-container" style="width: 100%;">
+                                    <!-- Re-order level -->
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="re-order-level">Re-order Level</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="number" name="re-order-level" id="re-order-level">
+                                        </div>
+                                    </div>
+
+                                    <!-- Cost Per Unit -->
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="cost-per-unit">Cost Per Unit</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="number" name="cost-per-unit" id="cost-per-unit">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="content-container">
+                                    <!-- For Description and Method of Administration -->
+                                    <div class="column" style="width: 74%;">
+                                        <div class="row">
+                                            <label for="description">Description</label>
+                                        </div>
+                                        <div class="row">
+                                            <textarea name="surg-supply-description" id="surg-supply-description" style="width: 1000px;"></textarea>
+                                        </div>
+                                    </div>
+                                </div> <br>
+                                <div class="conduct-appointment-btn-container">
+                                    <button type="button" id="conduct-appointment-btn">Edit</button>
                                 </div>
                             </div>
                         </div>
@@ -377,7 +530,7 @@
                     <!-- Non-Surgical Supplies -->
                     <div class="accordion-item">
                         <button class="accordion-header">Non-Surgical Supplies</button>
-                        <div class="accordion-content" style="padding: 0px 10px;"> <br>
+                        <div class="accordion-content" id="accordion-content-3" style="padding: 0px 10px;"> <br>
                             <!-- Searchbox and sort btn -->
                             <div class="search">
                                 <div class="search-container">
@@ -397,7 +550,7 @@
                             </div>
                             <div class="content-container">
                                 <div class="table-container">
-                                    <table class="surg-table">
+                                    <table class="non-surg-table">
                                         <thead>
                                             <tr>
                                                 <th>Item Number</th>
@@ -429,15 +582,83 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="content-container" style="padding-left: 180px;">
+                            <div class="content-container" style="padding-left: 133px;">
                                 <!-- For Description -->
                                 <div class="column" style="width: 100%;">
                                     <div class="row">
                                         <label for="description">Description</label>
                                     </div>
                                     <div class="row">
-                                        <textarea name="non-surg-supply-description" id="non-surg-supply-description" readonly></textarea>
+                                        <textarea name="surg-supply-description" id="surg-supply-description" readonly style="width: 1065px;"></textarea>
                                     </div>
+                                </div>
+                            </div> <br>
+
+                            <!-- View and Update Container -->
+                            <div class="container2" id="container2-3">
+                                <!-- Close Button -->
+                                <button class="close-btn" id="close-btn">x</button>
+                                <h4 class="container2-title">Non-surgical Supply Information</h4> <br>
+
+                                <!-- Non-surg Name and Quantity Stock -->
+                                <div class="content-container" style="width: 100%;">
+                                    <!-- Non-surg name -->
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="non-surg-name">Item Name</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="text" name="non-surg-name" id="non-surg-name">
+                                        </div>
+                                    </div>
+
+                                    <!-- Quantity Stock -->
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="quantity-stock">Quantity Stock</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="number" name="quantity-stock" id="quantity-stock">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Re-order level and Cost Per Unit -->
+                                <div class="content-container" style="width: 100%;">
+                                    <!-- Re-order level -->
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="re-order-level">Re-order Level</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="number" name="re-order-level" id="re-order-level">
+                                        </div>
+                                    </div>
+
+                                    <!-- Cost Per Unit -->
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="cost-per-unit">Cost Per Unit</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="number" name="cost-per-unit" id="cost-per-unit">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="content-container">
+                                    <!-- For Description -->
+                                    <div class="column" style="width: 74%;">
+                                        <div class="row">
+                                            <label for="description">Description</label>
+                                        </div>
+                                        <div class="row">
+                                            <textarea name="non-surg-supply-description" id="non-surg-supply-description" style="width: 1000px;"></textarea>
+                                        </div>
+                                    </div>
+                                </div> <br>
+
+                                <div class="conduct-appointment-btn-container">
+                                    <button type="button" id="conduct-appointment-btn">Edit</button>
                                 </div>
                             </div>
                         </div>

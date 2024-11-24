@@ -34,7 +34,7 @@
                                 <div class="column">
                                     <div class="row">
                                         <label for="supplier-email">Supplier Email</label>
-                                        <input type="date" name="supplier-email" id="supplier-email">
+                                        <input type="email" name="supplier-email" id="supplier-email">
                                     </div>
                                 </div>
                             </div>
