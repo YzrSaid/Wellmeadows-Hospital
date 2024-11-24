@@ -26,7 +26,7 @@
                                 <div class="column">
                                     <div class="row">
                                         <label for="supplier_name">Supplier Name</label>
-                                        <input type="text" name="supplier-name" id="supplier-name">
+                                        <input type="text" name="supplier-name" id="supplier-name-a">
                                     </div>
                                 </div>
 

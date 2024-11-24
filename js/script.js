@@ -232,6 +232,30 @@ document.querySelectorAll(".supplier-table tbody tr").forEach((row) => {
   });
 });
 
+// This is for highlighting a row in the table whenever a user clicks an item (ward-table)
+document.querySelectorAll(".ward-table tbody tr").forEach((row) => {
+  row.addEventListener("click", function () {
+    // Remove 'selected' class from all rows
+    document.querySelectorAll(".ward-table tbody tr").forEach((r) => {
+      r.classList.remove("selected");
+    });
+
+    // Add 'selected' class to the clicked row
+    this.classList.add("selected");
+
+    // Make the .accordion-content big enough to allow the container fit
+    const accordionContent = document.querySelector(".accordion-content");
+
+    accordionContent.style.maxHeight = "fit-content";
+    // Show the container
+    const container = document.querySelector(".container2");
+    if (container) {
+      // Set container visibility
+      container.style.cssText = "display: block;";
+    }
+  });
+});
+
 // This is for highlighting a row in the table whenever a user clicks an item (work-experience-table)
 document.querySelectorAll(".work-experience-table tbody tr").forEach((row) => {
   row.addEventListener("click", function () {
@@ -368,7 +392,7 @@ function deselectTableRow(container) {
   const table = container
     .closest(".wrapper")
     .querySelector(
-      ".supplier-table, .patient-table, .work-experience-table, .qualification-table"
+      ".supplier-table, .patient-table, .work-experience-table, .qualification-table, .ward-table"
     ); // Add class selectors for other tables
   if (table) {
     // Deselect any selected rows in the table

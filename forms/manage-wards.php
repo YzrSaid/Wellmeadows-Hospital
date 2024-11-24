@@ -12,12 +12,12 @@
     <?php include '../components/navbar.php'; ?>
     <div class="wrapper">
         <div class="container">
-            <h1>Manage Suppliers</h1>
+            <h1>Manage Wards</h1>
             <section class="wards-section">
                 <div class="accordion">
-                    <!-- Patient List -->
+                    <!-- Wards List -->
                     <div class="accordion-item">
-                        <button class="accordion-header">Supplier List</button>
+                        <button class="accordion-header">Wards List</button>
                         <div class="accordion-content" style="padding: 0px 10px;"> <br>
                             <!-- Searchbox and sort btn -->
                             <div class="search">
@@ -28,67 +28,59 @@
                                 <div class="sort-container">
                                     <select name="sort" id="sort-select" class="sort-select">
                                         <option value="" disabled selected>Sort</option>
-                                        <option value="supplier-number">ID</option>
-                                        <option value="supplier-name">Name</option>
-                                        <option value="supplier-address">Address</option>
-                                        <option value="supplier-email">Email</option>
-                                        <option value="supplier-tel-num">Tel. Number</option>
-                                        <option value="supplier-fax-num">Fax Number</option>
+                                        <option value="ward-number">ID</option>
+                                        <option value="ward-name">Name</option>
+                                        <option value="ward-address">Location</option>
+                                        <option value="ward-email">Number of Beds</option>
+                                        <option value="ward-tel-num">Tel. Number</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="content-container">
                                 <div class="table-container">
-                                    <table class="supplier-table">
+                                    <table class="ward-table">
                                         <thead>
                                             <tr>
-                                                <th>Supplier #</th>
-                                                <th>Supplier Name</th>
-                                                <th>Address</th>
-                                                <th>Email</th>
+                                                <th>Ward #</th>
+                                                <th>Ward Name</th>
+                                                <th>Location</th>
+                                                <th>Number of Beds</th>
                                                 <th>Tel. Number</th>
-                                                <th>Fax Number</th>
                                             </tr>
                                         </thead>
 
                                         <tbody>
                                             <tr>
-                                                <!-- Supplier Number -->
+                                                <!-- Ward Number -->
                                                 <td>0001</td>
 
-                                                <!-- Supplier Name -->
+                                                <!-- Ward Name -->
                                                 <td>Shenzheng Sorting Center</td>
 
-                                                <!-- Address -->
-                                                <td>Sampaloc Drive, Talon-Talon, Zamboanga City, Philippines</td>
+                                                <!-- Location -->
+                                                <td>Basta nasa Hospital lang dapit</td>
 
-                                                <!-- Email -->
-                                                <td>sample_username@gmail.com</td>
+                                                <!-- Number of Beds -->
+                                                <td>15</td>
 
                                                 <!-- Tel. Number -->
                                                 <td>+63 35 826 8263</td>
-
-                                                <!-- Fax Number -->
-                                                <td>00022412</td>
                                             </tr>
                                             <tr>
-                                                <!-- Supplier Number -->
+                                                <!-- Ward Number -->
                                                 <td>0001</td>
 
-                                                <!-- Supplier Name -->
+                                                <!-- Ward Name -->
                                                 <td>Shenzheng Sorting Center</td>
 
-                                                <!-- Address -->
-                                                <td>Sampaloc Drive, Talon-Talon, Zamboanga City, Philippines</td>
+                                                <!-- Location -->
+                                                <td>Basta nasa Hospital lang dapit</td>
 
-                                                <!-- Email -->
-                                                <td>sample_username@gmail.com</td>
+                                                <!-- Number of Beds -->
+                                                <td>15</td>
 
                                                 <!-- Tel. Number -->
                                                 <td>+63 35 826 8263</td>
-
-                                                <!-- Fax Number -->
-                                                <td>00022412</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -98,53 +90,49 @@
                             <div class="container2">
                                 <!-- Close Button -->
                                 <button class="close-btn" id="close-btn">x</button>
-                                <h4 class="container2-title">Supplier Information</h4> <br>
+                                <h4 class="container2-title">Ward Information</h4> <br>
 
-                                <!-- Supplier Number -->
+                                <!-- Ward Number -->
                                 <div class="content-container">
                                     <div class="column">
                                         <div class="row">
-                                            <label for="supplier-num">Supplier Number</label>
-                                            <input type="number" name="supplier-number" id="supplier-number" value="0001" readonly style="margin-right: 20px;">
+                                            <label for="ward-num">Ward Number</label>
+                                            <input type="number" name="ward-number" id="ward-number" value="0001" readonly>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Supplier Name -->
+                                <!-- Ward Name and Location-->
                                 <div class="content-container">
                                     <div class="column">
-                                        <div class="row" style="width: 970px;">
-                                            <label for="patient-name">Supplier Name</label>
-                                            <input type="text" name="supplier-name" id="supplier-name" value="Shenzheng Sorting Center" readonly>
+                                        <div class="row">
+                                            <label for="ward-name">Ward Name</label>
+                                            <input type="text" name="ward-name" id="ward-name" value="Shenzheng Sorting Center" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="row">
+                                            <label for="address">Location</label>
+                                            <input type="text" name="ward-location" id="ward-location">
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Supplier Address-->
+                                <!-- Number of Beds and Tel. Number -->
                                 <div class="content-container">
-                                    <div class="column">
-                                        <div class="row" style="width: 970px;">
-                                            <label for="address">Address</label>
-                                            <input style="margin-left: 83px;" type="text" name="supplier-address" id="address">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Supplier Tel. Number and Supplier Fax Number -->
-                                <div class="content-container">
-                                    <!-- Supplier Tel. Number -->
+                                    <!-- Number of Beds -->
                                     <div class="column">
                                         <div class="row">
-                                            <label for="supplier-tel-number">Tel. Number</label>
-                                            <input type="tel" style="margin-right: 20px;" name="supplier-tel-number" id="supplier-tel-number" value="+63 935 826 8263">
+                                            <label for="number-of-beds">Number of Beds</label>
+                                            <input type="number" name="number-of-beds" id="number-of-beds" value="00022412">
                                         </div>
                                     </div>
 
-                                    <!-- Fax Number -->
+                                    <!-- Ward Tel. Number -->
                                     <div class="column">
                                         <div class="row">
-                                            <label for="supplier-fax-number">Fax Number</label>
-                                            <input type="number" name="supplier-fax-number" id="supplier-fax-number" value="00022412">
+                                            <label for="ward-tel-number">Tel. Number</label>
+                                            <input type="tel" name="ward-tel-number" id="ward-tel-number" value="+63 935 826 8263">
                                         </div>
                                     </div>
                                 </div> <br>

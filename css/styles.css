@@ -590,6 +590,10 @@ a {
   width: 100%;
   border-collapse: collapse;
 }
+.ward-table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
 .waiting-list-table th,
 .waiting-list-table td {
@@ -654,6 +658,13 @@ a {
   text-align: center;
   color: #333;
 }
+.ward-table th,
+.ward-table td {
+  padding: 10px;
+  border: 1px solid #333;
+  text-align: center;
+  color: #333;
+}
 .pharma-table th {
   background-color: #575859;
   color: white;
@@ -691,6 +702,12 @@ a {
   text-align: center;
 }
 .local-doctor-table th {
+  background-color: #575859;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.ward-table th {
   background-color: #575859;
   color: white;
   font-weight: bold;
@@ -750,6 +767,14 @@ a {
   transition: background-color 0.3s ease;
 }
 .local-doctor-table tbody tr.selected {
+  background-color: #5758592c !important;
+  color: white !important;
+}
+.ward-table tr {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.ward-table tbody tr.selected {
   background-color: #5758592c !important;
   color: white !important;
 }
