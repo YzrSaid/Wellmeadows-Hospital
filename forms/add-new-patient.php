@@ -26,23 +26,20 @@
                                         <label for="first_name">First Name</label>
                                         <input type="text" id="first_name">
                                     </div>
-
-                                    <!-- Location -->
-                                    <div class="row">
-                                        <label for="street">Street</label>
-                                        <input type="text" id="street">
-                                    </div>
-
+                                </div>
                                 <div class="column">
                                     <!-- Last Name -->
                                     <div class="row">
-                                        <label for="city">City</label>
-                                        <input type="text" id="city">
+                                        <label for="first_name">Last Name</label>
+                                        <input type="text" id="first_name">
                                     </div>
-
-                                    <div class="row">
-                                        <label for="country">Country</label>
-                                        <input type="text" id="country">
+                                </div>
+                            </div>
+                            <div class="content-container">
+                                <div class="column">
+                                    <div class="row" style="width: 1100px; ">
+                                        <label for="address">Address</label>
+                                        <input type="text" name="kin-address" id="address">
                                     </div>
                                 </div>
                             </div>
@@ -66,15 +63,14 @@
                                         <label for="country">Clinic Num</label>
                                         <input type="number" name="clinic-num">
                                     </div>
-                                </div>
-                                    
-                                <div class="column">
-                                    <!-- Last Name -->
+
+                                    <!-- Date of Birth -->
                                     <div class="row">
-                                        <label for="first_name">Last Name</label>
-                                        <input type="text" id="first_name">
+                                        <label for="date-of-birth">Date of Birth</label>
+                                        <input type="date" id="date-of-birth">
                                     </div>
                                 </div>
+
                                 <div class="column">
                                     <!-- Gender -->
                                     <div class="row">
@@ -95,12 +91,6 @@
                                     <!-- Date Registered -->
                                     <div class="row">
                                         <label for="date-of-birth">Date Registered</label>
-                                        <input type="date" id="date-of-birth">
-                                    </div>
-
-                                    <!-- Date of Birth -->
-                                    <div class="row">
-                                        <label for="date-of-birth">Date of Birth</label>
                                         <input type="date" id="date-of-birth">
                                     </div>
                                 </div>
@@ -240,7 +230,7 @@
             </div>
         </div>
     </div>
-   
+
     <!-- JS Script -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
