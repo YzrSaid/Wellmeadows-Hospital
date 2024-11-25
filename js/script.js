@@ -440,6 +440,6 @@ function deselectTableRow(container) {
     });
   }
 }
-
+// Sample to push
 // Initialize the close button functionality when the DOM is ready
 document.addEventListener("DOMContentLoaded", initializeCloseButton);
