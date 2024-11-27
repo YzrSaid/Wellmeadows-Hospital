@@ -10,6 +10,8 @@
 <body>
     <!-- Nav bar component -->
     <?php include '../components/navbar.php'; ?>
+    <!-- Fetch PHP -->
+    <?php include '../php-fetch-forms/fetch-patients.php'; ?>
 
     <html lang="en">
 
@@ -70,68 +72,8 @@
                                         </thead>
 
                                         <tbody>
-                                            <tr>
-                                                <!-- Patient Number -->
-                                                <td>0001</td>
-
-                                                <!-- Patient Name -->
-                                                <td>Aldrin Said</td>
-
-                                                <!-- Sex -->
-                                                <td>Male</td>
-
-                                                <!-- Address -->
-                                                <td>Sampaloc Drive, Talon-Talon, Zamboanga, Philippines</td>
-
-                                                <!-- Marital Status -->
-                                                <td>Kabit</td>
-
-                                                <!-- Tel. Number -->
-                                                <td>+63 35 826 8263</td>
-
-                                                <!-- Date of Birth -->
-                                                <td>2002-12-10</td>
-
-                                                <!-- Date Registered -->
-                                                <td>2002-12-10</td>
-
-                                                <!-- Next of Kin -->
-                                                <td>Nicolette Vergara-Said</td>
-
-                                                <!-- Referred By -->
-                                                <td>N/A</td>
-                                            </tr>
-                                            <tr>
-                                                <!-- Patient Number -->
-                                                <td>0001</td>
-
-                                                <!-- Patient Name -->
-                                                <td>Aldrin Said</td>
-
-                                                <!-- Sex -->
-                                                <td>Male</td>
-
-                                                <!-- Address -->
-                                                <td>Sampaloc Drive, Talon-Talon, Zamboanga, Philippines</td>
-
-                                                <!-- Marital Status -->
-                                                <td>Kabit</td>
-
-                                                <!-- Tel. Number -->
-                                                <td>+63 35 826 8263</td>
-
-                                                <!-- Date of Birth -->
-                                                <td>2002-12-10</td>
-
-                                                <!-- Date Registered -->
-                                                <td>2002-12-10</td>
-
-                                                <!-- Next of Kin -->
-                                                <td>Nicolette Vergara-Said</td>
-
-                                                <!-- Referred By -->
-                                                <td>N/A</td>
-                                            </tr>
+                                            
+                                            
                                             <tr>
                                                 <!-- Patient Number -->
                                                 <td>0001</td>
@@ -312,7 +254,9 @@
     </div>
 
     <!-- JS Script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/ajax-patient.js"></script>
 </body>
 
 </html>

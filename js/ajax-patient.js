@@ -104,3 +104,63 @@ $(document).ready(function () {
       $('input, select').val('');
   });
 });
+
+
+// manage_patients.js
+
+document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.querySelector('.search-input');
+    const tableRows = document.querySelectorAll('.patient-table tbody tr');
+
+    // Search functionality
+    searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase();
+        tableRows.forEach(row => {
+            row.style.display = row.textContent.toLowerCase().includes(query) ? '' : 'none';
+        });
+    });
+
+    // Sort functionality
+    const sortSelect = document.getElementById('sort-select');
+    const tbody = document.querySelector('.patient-table tbody');
+
+    sortSelect.addEventListener('change', () => {
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        const columnIndex = sortSelect.selectedIndex - 1;
+
+        rows.sort((a, b) => {
+            const aText = a.children[columnIndex]?.textContent.trim();
+            const bText = b.children[columnIndex]?.textContent.trim();
+            return aText.localeCompare(bText, undefined, { numeric: true });
+        });
+
+        rows.forEach(row => tbody.appendChild(row));
+    });
+
+    // Fetch patient data from the server
+    fetch('../php-fetch-forms/fetch-patients.php')
+        .then(response => response.json())
+        .then(data => {
+            const tableBody = document.querySelector('.patient-table tbody');
+            data.forEach(patient => {
+                const row = document.createElement('tr');
+                
+                // Make sure each property is present before appending it to avoid errors
+                row.innerHTML = `
+                    <td>${patient.clinic_num || 'N/A'}</td>
+                    <td>${patient.full_name || 'N/A'}</td>
+                    <td>${patient.gender || 'N/A'}</td>
+                    <td>${patient.address || 'N/A'}</td>
+                    <td>${patient.m_status || 'N/A'}</td>
+                    <td>${patient.phone_num || 'N/A'}</td>
+                    <td>${patient.date_of_birth || 'N/A'}</td>
+                    <td>${patient.date_registered || 'N/A'}</td>
+                    <td>${patient.next_of_kin_name ? patient.next_of_kin_name + ' (' + patient.relationship + ')' : 'N/A'}</td>
+                `;
+                
+                tableBody.appendChild(row);
+            });
+        })
+        .catch(error => console.error('Error fetching patient data:', error));
+});
+
