@@ -10,8 +10,7 @@
 <body>
     <!-- Nav bar component -->
     <?php include '../components/navbar.php'; ?>
-    <!-- Fetch PHP -->
-    <?php include '../php-fetch-forms/fetch-patients.php'; ?>
+    
 
     <html lang="en">
 
