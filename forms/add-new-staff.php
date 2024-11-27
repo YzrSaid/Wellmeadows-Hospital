@@ -71,6 +71,11 @@
                                         <label for="date-of-birth">Date of Birth</label>
                                         <input type="date" name="staff-date-of-birth" id="date-of-birth">
                                     </div>
+
+                                    <div class="row">
+                                        <label for="ward-number">Ward Number</label>
+                                        <input type="number" name="staff-ward-input" id="ward-num">
+                                    </div>
                                 </div>
                             </div>
 
@@ -170,7 +175,9 @@
         </div>
     </div>
     <!-- JS Script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/ajax-staff.js"></script>
 </body>
 
 </html>

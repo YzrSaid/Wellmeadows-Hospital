@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellmeadows Hospital</title>
     <link rel="stylesheet" href="../css/styles.css">
-</head>
+</head> 
 
 <body>
     <!-- Nav bar component -->
@@ -31,7 +31,7 @@
                                     <!-- Last Name -->
                                     <div class="row">
                                         <label for="first_name">Last Name</label>
-                                        <input type="text" id="first_name">
+                                        <input type="text" id="last_name">
                                     </div>
                                 </div>
                             </div>
@@ -39,7 +39,7 @@
                                 <div class="column">
                                     <div class="row" style="width: 1100px; ">
                                         <label for="address">Address</label>
-                                        <input type="text" name="kin-address" id="address">
+                                        <input type="text" name="patient-adress" id="address">
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                                     <!-- Clinic Number -->
                                     <div class="row">
                                         <label for="country">Clinic Num</label>
-                                        <input type="number" name="clinic-num">
+                                        <input type="number" name="clinic-num" id="clinic-num">
                                     </div>
 
                                     <!-- Date of Birth -->
@@ -88,11 +88,6 @@
                                         <input type="tel" id="phone-input">
                                     </div>
 
-                                    <!-- Date Registered -->
-                                    <div class="row">
-                                        <label for="date-of-birth">Date Registered</label>
-                                        <input type="date" id="date-of-birth">
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -120,19 +115,14 @@
                             </div>
                             <div class="content-container">
                                 <div class="column">
-                                    <div class="row" style="width: 1100px; ">
+                                    <div class="row" style="width: 500px; ">
                                         <label for="address">Address</label>
-                                        <input type="text" name="kin-address" id="address">
+                                        <input type="text" name="kin-address" id="kin-address">
                                     </div>
                                 </div>
                             </div>
                             <div class="content-container">
                                 <div class="column">
-                                    <!-- Date of Birth -->
-                                    <div class="row">
-                                        <label for="date-of-birth">Date of Birth</label>
-                                        <input type="date" name="kin-date-of-birth" id="kin-date-of-birth">
-                                    </div>
 
                                     <!-- Relationship with the patient -->
                                     <div class="row">
@@ -157,7 +147,7 @@
                                     <!-- Phone Number-->
                                     <div class="row">
                                         <label for="phone-number">Phone Number</label>
-                                        <input type="tel" name="kin-phone-input" id="phone-input">
+                                        <input type="tel" name="kin-phone-input" id="kin-phone-input">
                                     </div>
                                 </div>
                             </div>
@@ -206,17 +196,24 @@
                                         <input type="time" name="appointment-time" id="appointment-time">
                                         <input type="date" name="appointment-date" id="appointment-date">
                                     </div>
+
+                                    
                                 </div>
                             </div>
                             <div class="content-container">
                                 <div class="column" style="width: 30%;">
                                     <!-- Staff -->
+                                    
                                     <div class="row">
+                                        <label for="country">Staff</label>
+                                        <input type="number" name="clinic-num" id="staff">
+                                    </div>
+                                    <!-- <div class="row">
                                         <label for="staff">Staff</label>
                                         <select name="staff" id="staff">
                                             <option value="" disabled selected>Choose</option>
                                         </select>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -234,7 +231,7 @@
     <!-- JS Script -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
-    <script src="../js/ajax.js"></script>
+    <script src="../js/ajax-patient.js"></script>
 </body>
 
 </html>

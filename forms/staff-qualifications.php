@@ -22,6 +22,15 @@
                         <div class="accordion-content"> <br>
                             <h4>Qualification Information</h4> <br>
                             <div class="content-container">
+                                <div class="column">
+                                    <div class="row">
+                                        <label for="staff">Staff Number</label>
+                                        <select style="margin-right: 78px;" name="staff-number" id="staff-number">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-container">
                                 <!-- Qualification Type, Date of Qualification, Institute Name -->
                                 <div class="column">
                                     <!-- Qualification Type -->

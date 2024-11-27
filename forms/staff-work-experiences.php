@@ -22,6 +22,15 @@
                         <div class="accordion-content"> <br>
                             <h4>Experience Information</h4> <br>
                             <div class="content-container">
+                                <div class="column">
+                                    <div class="row">
+                                        <label for="staff">Staff Number</label>
+                                        <select name="staff-number" id="staff-number">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-container">
                                 <!-- Name of Org and Start Date -->
                                 <div class="column">
                                     <!-- Name of Org -->
@@ -227,7 +236,9 @@
         </div>
     </div>
     <!-- JS Script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/ajax-work-exp.js"></script>
 </body>
 
 </html>
