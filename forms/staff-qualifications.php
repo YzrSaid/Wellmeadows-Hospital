@@ -25,8 +25,10 @@
                                 <div class="column">
                                     <div class="row">
                                         <label for="staff">Staff Number</label>
-                                        <select style="margin-right: 78px;" name="staff-number" id="staff-number">
-                                        </select>
+                                        <input type="text" name="institute-name" id="staff-number" style="width: 55%;">
+                                        <!-- <label for="staff">Staff Number</label>
+                                        <select style="margin-right: 78px;" na  me="staff-number" id="staff-number">
+                                        </select> -->
                                     </div>
                                 </div>
                             </div>
@@ -249,6 +251,8 @@
     </div>
     <!-- JS Script -->
     <script src="../js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/ajax-qualifs.js"></script>
 </body>
 
 </html>
