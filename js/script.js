@@ -377,19 +377,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// This is for highlighting a row in the table whenever user clicks an item (qualification-table)
-document.querySelectorAll(".qualification-table tbody tr").forEach((row) => {
-  row.addEventListener("click", function () {
-    // Remove 'selected' class from all rows
-    document.querySelectorAll(".qualification-table tbody tr").forEach((r) => {
-      r.classList.remove("selected");
-    });
-
-    // Add 'selected' class to the clicked row
-    this.classList.add("selected");
-  });
-});
-
 // This is for highlighting a row in the table whenever user clicks an item (local-doctor-table)
 document.querySelectorAll(".local-doctor-table tbody tr").forEach((row) => {
   row.addEventListener("click", function () {
