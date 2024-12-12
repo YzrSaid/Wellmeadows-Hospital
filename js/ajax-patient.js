@@ -172,6 +172,8 @@ document.querySelectorAll(".patient-table tbody tr").forEach((row) => {
       }
     });
   });
+
+  
 // manage_patients.js
 
 document.addEventListener('DOMContentLoaded', function () {
