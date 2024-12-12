@@ -977,3 +977,24 @@ select option[value=""] {
 #close-btn:hover {
   background-color: darkred;
 }
+
+
+/* Highlight selected row */
+.highlighted {
+  background-color: #f0f8ff; /* Light blue for highlighting */
+  transition: background-color 0.3s;
+}
+
+/* Initially hide the edit form */
+.container2 {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}

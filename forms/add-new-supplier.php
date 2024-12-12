@@ -25,7 +25,7 @@
                                 <!-- Supplier Name -->
                                 <div class="column">
                                     <div class="row">
-                                        <label for="supplier_name">Supplier Name</label>
+                                        <label for="supplier-name-a">Supplier Name</label>
                                         <input type="text" name="supplier-name" id="supplier-name-a">
                                     </div>
                                 </div>
@@ -80,6 +80,8 @@
     </div>
     <!-- JS Script -->
     <script src="../js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/ajax-suppliers.js"></script>
 </body>
 
 </html>

@@ -44,6 +44,11 @@
                                         <label for="start-of-date">Start of Date</label>
                                         <input type="date" name="start-of-date" id="start-of-date">
                                     </div>
+
+                                    <div class="row">
+                                        <label for="staff">Staff Number</label>
+                                        <input type="number" name="staff-number" id="staff-number">
+                                    </div>
                                 </div>
 
                                 <!-- Position and End of Date -->

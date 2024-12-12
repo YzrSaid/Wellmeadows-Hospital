@@ -342,29 +342,7 @@ document.querySelectorAll(".qualification-table tbody tr").forEach((row) => {
   });
 });
 
-// This is for highlighting a row in the table whenever a user clicks an item (patient-table)
-document.querySelectorAll(".patient-table tbody tr").forEach((row) => {
-  row.addEventListener("click", function () {
-    // Remove 'selected' class from all rows
-    document.querySelectorAll(".patient-table tbody tr").forEach((r) => {
-      r.classList.remove("selected");
-    });
 
-    // Add 'selected' class to the clicked row
-    this.classList.add("selected");
-
-    // Make the .accordion-content big enough to allow the container fit
-    const accordionContent = document.querySelector(".accordion-content");
-
-    accordionContent.style.maxHeight = "fit-content";
-    // Show the container
-    const container = document.querySelector(".container2");
-    if (container) {
-      // Set container visibility
-      container.style.cssText = "display: block;";
-    }
-  });
-});
 
 // Hide the container initially
 document.addEventListener("DOMContentLoaded", () => {
@@ -375,6 +353,19 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.error("Container not found during initialization!"); // Debugging aid
   }
+});
+
+// This is for highlighting a row in the table whenever user clicks an item (qualification-table)
+document.querySelectorAll(".qualification-table tbody tr").forEach((row) => {
+  row.addEventListener("click", function () {
+    // Remove 'selected' class from all rows
+    document.querySelectorAll(".qualification-table tbody tr").forEach((r) => {
+      r.classList.remove("selected");
+    });
+
+    // Add 'selected' class to the clicked row
+    this.classList.add("selected");
+  });
 });
 
 // This is for highlighting a row in the table whenever user clicks an item (local-doctor-table)
@@ -390,44 +381,5 @@ document.querySelectorAll(".local-doctor-table tbody tr").forEach((row) => {
   });
 });
 
-// Function to initialize close button functionality for any table
-function initializeCloseButton() {
-  document.querySelectorAll(".close-btn").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      // Find the parent container of the close button
-      const container = btn.closest(".container2");
-      if (container) {
-        // Hide the container
-        container.style.display = "none";
 
-        // Deselect any selected rows in the table that corresponds to this container
-        deselectTableRow(container);
-      } else {
-        console.error("No container found to hide!"); // Debugging aid
-      }
-    });
-  });
-}
 
-// Function to deselect any selected row in all relevant tables within the container
-function deselectTableRow(container) {
-  // Find all tables within the same wrapper
-  const tables = container
-    .closest(".wrapper")
-    .querySelectorAll(
-      ".supplier-table, .patient-table, .work-experience-table, .qualification-table, .ward-table, .pharma-table, .surg-table, .non-surg-table"
-    ); // Add class selectors for other tables
-
-  if (tables.length) {
-    // Iterate through each table and deselect any selected rows
-    tables.forEach((table) => {
-      table.querySelectorAll("tbody tr.selected").forEach((row) => {
-        row.classList.remove("selected");
-      });
-    });
-  }
-}
-// Sample to push 
-// yawa ka Jones
-// Initialize the close button functionality when the DOM is ready
-document.addEventListener("DOMContentLoaded", initializeCloseButton);

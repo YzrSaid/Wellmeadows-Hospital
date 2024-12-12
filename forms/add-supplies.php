@@ -48,7 +48,7 @@
                                         <label for="quantity-stock">Quantity Stock</label>
                                     </div>
                                     <div class="row">
-                                        <input type="number" name="quantity-stock" id="quantity-stock">
+                                        <input type="number" name="quantity-stock" id="phar-quantity-stock">
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                                         <label for="re-order-level">Re-order Level</label>
                                     </div>
                                     <div class="row">
-                                        <input type="number" name="re-order-level" id="re-order-level">
+                                        <input type="number" name="re-order-level" id="phar-re-order-level">
                                     </div>
                                 </div>
 
@@ -71,7 +71,7 @@
                                         <label for="cost-per-unit">Cost Per Unit</label>
                                     </div>
                                     <div class="row">
-                                        <input type="number" name="cost-per-unit" id="cost-per-unit">
+                                        <input type="number" name="cost-per-unit" id="phar-cost-per-unit">
                                     </div>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@
                                         <label for="description">Description</label>
                                     </div>
                                     <div class="row">
-                                        <textarea name="phar-supply-description" id="phar-supply-description" readonly></textarea>
+                                        <textarea name="phar-supply-description" id="phar-supply-description"></textarea>
                                     </div>
                                 </div>
                                 <div class="column">
@@ -126,7 +126,7 @@
                                         <label for="quantity-stock">Quantity Stock</label>
                                     </div>
                                     <div class="row">
-                                        <input type="number" name="quantity-stock" id="quantity-stock">
+                                        <input type="number" name="quantity-stock" id="non-surg-quantity-stock">
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@
                                         <label for="re-order-level">Re-order Level</label>
                                     </div>
                                     <div class="row">
-                                        <input type="number" name="re-order-level" id="re-order-level">
+                                        <input type="number" name="re-order-level" id="non-surg-re-order-level">
                                     </div>
                                 </div>
 
@@ -149,7 +149,7 @@
                                         <label for="cost-per-unit">Cost Per Unit</label>
                                     </div>
                                     <div class="row">
-                                        <input type="number" name="cost-per-unit" id="cost-per-unit">
+                                        <input type="number" name="cost-per-unit" id="non-surg-cost-per-unit">
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +194,7 @@
                                         <label for="quantity-stock">Quantity Stock</label>
                                     </div>
                                     <div class="row">
-                                        <input type="number" name="quantity-stock" id="quantity-stock">
+                                        <input type="number" name="quantity-stock" id="surg-quantity-stock">
                                     </div>
                                 </div>
                             </div>
@@ -207,7 +207,7 @@
                                         <label for="re-order-level">Re-order Level</label>
                                     </div>
                                     <div class="row">
-                                        <input type="number" name="re-order-level" id="re-order-level">
+                                        <input type="number" name="re-order-level" id="surg-re-order-level">
                                     </div>
                                 </div>
 
@@ -217,7 +217,7 @@
                                         <label for="cost-per-unit">Cost Per Unit</label>
                                     </div>
                                     <div class="row">
-                                        <input type="number" name="cost-per-unit" id="cost-per-unit">
+                                        <input type="number" name="cost-per-unit" id="surg-cost-per-unit">
                                     </div>
                                 </div>
                             </div>
@@ -245,7 +245,9 @@
         </div>
     </div>
     <!-- JS Script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/ajax-supplies.js"></script>
 </body>
 
 </html>

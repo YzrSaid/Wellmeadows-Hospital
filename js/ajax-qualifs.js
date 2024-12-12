@@ -38,43 +38,7 @@ $(document).ready(function () {
 });
 
 
-
 // Manage Staff Qualifications
-$(document).ready(function () {
-  // Load qualifications data on page load
-  function loadQualifications(searchQuery = '', sortBy = '') {
-      $.ajax({
-          url: '../php-fetch-forms/fetch-staff-qualifs.php',
-          method: 'GET',
-          data: {
-              search: searchQuery,
-              sort: sortBy
-          },
-          success: function (data) {
-              // Populate table body
-              $('.qualification-table tbody').html(data);
-          },
-          error: function () {
-              alert('Failed to load qualifications. Please try again.');
-          }
-      });
-  }
-
-  // Call the function to load data initially
-  loadQualifications();
-
-  // Search functionality
-  $('.search-btn').on('click', function () {
-      const searchQuery = $('.search-input').val();
-      loadQualifications(searchQuery, $('#sort-select').val());
-  });
-
-  // Sort functionality
-  $('#sort-select').on('change', function () {
-      const sortBy = $(this).val();
-      loadQualifications($('.search-input').val(), sortBy);
-  });
-});// Manage Staff Qualifications
 $(document).ready(function () {
   // Load qualifications data on page load
   function loadQualifications(searchQuery = '', sortBy = '') {

@@ -10,7 +10,7 @@
 <body>
     <!-- Nav bar component -->
     <?php include '../components/navbar.php'; ?>
-    
+   
 
     <html lang="en">
 
@@ -66,44 +66,13 @@
                                                 <th>Date of Birth</th>
                                                 <th>Date Registered</th>
                                                 <th>Next-of-Kin</th>
-                                                <th>Referred By</th>
+                                                
                                             </tr>
                                         </thead>
 
                                         <tbody>
-                                            
-                                            
-                                            <tr>
-                                                <!-- Patient Number -->
-                                                <td>0001</td>
-
-                                                <!-- Patient Name -->
-                                                <td>Aldrin Said</td>
-
-                                                <!-- Sex -->
-                                                <td>Male</td>
-
-                                                <!-- Address -->
-                                                <td>Sampaloc Drive, Talon-Talon, Zamboanga, Philippines</td>
-
-                                                <!-- Marital Status -->
-                                                <td>Kabit</td>
-
-                                                <!-- Tel. Number -->
-                                                <td>+63 35 826 8263</td>
-
-                                                <!-- Date of Birth -->
-                                                <td>2002-12-10</td>
-
-                                                <!-- Date Registered -->
-                                                <td>2002-12-10</td>
-
-                                                <!-- Next of Kin -->
-                                                <td>Nicolette Vergara-Said</td>
-
-                                                <!-- Referred By -->
-                                                <td>N/A</td>
-                                            </tr>
+                                          <tr>
+                                          </tr>
                                         </tbody>
                                     </table>
                                 </div>
