@@ -20,7 +20,7 @@
              <p class="dropdown-toggle" onclick="toggleDropdown('dropdownStaff')">Staff</p>
              <div id="dropdownStaff" class="dropdown-content">
                  <a href="../forms/add-new-staff.php">Add New Staff</a>
-                 <a href="#">Manage Staff Information</a>
+                 <a href="../forms/manage-staff-information.php">Manage Staff Information</a>
                  <a href="../forms/staff-work-experiences.php">Staff Work Experiences</a>
                  <a href="../forms/staff-qualifications.php">Staff Qualifications</a>
              </div>

@@ -53,3 +53,34 @@ $(document).ready(function () {
       $('input, select').val('');
   });
 });
+
+
+// This is for highlighting a row in the table whenever a user clicks an item (patient-table)
+document.addEventListener("DOMContentLoaded", () => {
+    const tableBody = document.querySelector(".staff-table tbody");
+    const container = document.querySelector(".container2");
+    const accordionContent = document.querySelector(".accordion-content");
+  
+    if (tableBody) {
+      tableBody.addEventListener("click", async (event) => {
+        const row = event.target.closest("tr");
+        if (row) {
+          // Remove 'selected' class from all rows
+          tableBody.querySelectorAll("tr.selected").forEach((r) => {
+            r.classList.remove("selected");
+          });
+  
+          // Add 'selected' class to the clicked row
+          row.classList.add("selected");
+  
+          // Show the container
+          if (accordionContent) {
+            accordionContent.style.maxHeight = "fit-content";
+          }
+          if (container) {
+            container.style.display = "block";
+          }
+        }
+      });
+    }
+  });

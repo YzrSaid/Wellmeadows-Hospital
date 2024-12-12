@@ -346,7 +346,7 @@ body {
   border-left: 1px solid black; /* Left border */
   border-right: 2px solid #000000; /* Right border */
   border-bottom: 2px solid #000000; /* Right border */
-  max-height: 0;
+  max-height: 0px;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
   background-color: #f5f5f5;
@@ -598,6 +598,10 @@ a {
   width: 100%;
   border-collapse: collapse;
 }
+.staff-table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
 .waiting-list-table th,
 .waiting-list-table td {
@@ -669,6 +673,13 @@ a {
   text-align: center;
   color: #333;
 }
+.staff-table th,
+.staff-table td {
+  padding: 10px;
+  border: 1px solid #333;
+  text-align: center;
+  color: #333;
+}
 .ward-table th,
 .ward-table td {
   padding: 10px;
@@ -695,6 +706,12 @@ a {
   text-align: center;
 }
 .patient-table th {
+  background-color: #575859;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.staff-table th {
   background-color: #575859;
   color: white;
   font-weight: bold;
@@ -760,6 +777,14 @@ a {
   transition: background-color 0.3s ease;
 }
 .patient-table tbody tr.selected {
+  background-color: #5758592c !important;
+  color: white !important;
+}
+.staff-table tr {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.staff-table tbody tr.selected {
   background-color: #5758592c !important;
   color: white !important;
 }
@@ -931,13 +956,21 @@ select option[value=""] {
   background-color: #333;
 }
 
+/* Initially hide the edit form */
 .container2 {
-  display: none;
   width: 80%;
   justify-self: center;
   background-color: #5758592c;
   padding: 20px;
   margin-bottom: 30px;
+  display: none;
+  top: 20%;
+  left: 50%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 .container2-title {
   color: #555;
@@ -978,23 +1011,8 @@ select option[value=""] {
   background-color: darkred;
 }
 
-
 /* Highlight selected row */
 .highlighted {
   background-color: #f0f8ff; /* Light blue for highlighting */
   transition: background-color 0.3s;
-}
-
-/* Initially hide the edit form */
-.container2 {
-  display: none;
-  position: fixed;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
 }

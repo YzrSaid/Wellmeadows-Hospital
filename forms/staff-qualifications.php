@@ -65,7 +65,7 @@
                     <!-- Manage Staff Qualifications-->
                     <div class="accordion-item">
                         <button class="accordion-header">Manage Staff Qualifications</button>
-                        <div class="accordion-content" id="accordion-content-open" style="padding: 0px 10px;"> <br>
+                        <div class="accordion-content" id="accordion-content-edit" style="padding: 0px 10px;"> <br>
                             <!-- Searchbox and sort btn -->
                             <div class="search">
                                 <div class="search-container">

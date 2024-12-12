@@ -67,17 +67,21 @@
                     <!-- Edit Local Doctor -->
                     <div class="accordion-item">
                         <button class="accordion-header">Edit Doctor</button>
-                        <div class="accordion-content"> <br>
-                            <h4>Choose a Local Doctor</h4> <br>
-                            <div class="content-container">
-                                <div class="column" style="width:30%;">
-                                    <!-- Doctor -->
-                                    <div class="row">
-                                        <label for="doctor-referred">Local Doctors: </label>
-                                        <select id="local-doctors" name="local-doctors">
-                                            <!-- options from db -->
-                                        </select>
-                                    </div>
+                        <div class="accordion-content" id="accordion-content-edit"> <br>
+                            <!-- Searchbox and sort btn -->
+                            <div class="search">
+                                <div class="search-container">
+                                    <input type="text" placeholder="Search..." class="search-input" />
+                                    <button class="search-btn">Search</button>
+                                </div>
+                                <div class="sort-container">
+                                    <select name="sort" id="sort-select" class="sort-select">
+                                        <option value="" disabled selected>Sort</option>
+                                        <option value="clinic-number">Clinic Number</option>
+                                        <option value="doctor-name">Doctor Name</option>
+                                        <option value="address">Address</option>
+                                        <option value="phone number">Phone Number</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="content-container">
@@ -112,8 +116,11 @@
                             </div>
 
                             <!-- View and Update Container -->
-                            <h4 class="container2-title">Supplier Information</h4> <br>
                             <div class="container2">
+                                <!-- Close Button -->
+                                <button class="close-btn" id="close-btn">x</button>
+
+                                <h4 class="container2-title">Doctor Information</h4> <br>
                                 <!-- Clinic Number -->
                                 <div class="content-container">
                                     <div class="column">
