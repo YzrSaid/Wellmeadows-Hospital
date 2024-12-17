@@ -171,7 +171,7 @@
                                 <div class="column">
                                     <!-- Add a Doctor -->
                                     <div class="row">
-                                        <p style="font-size: 14px;">Add new Local Doctor? <span><a href="local_doctor_information.php">Click here</a></span></p>
+                                        <p style="font-size: 14px;">Add new Local Doctor? <span><a href="local-doctor-information.php">Click here</a></span></p>
                                     </div>
                                 </div>
                             </div>

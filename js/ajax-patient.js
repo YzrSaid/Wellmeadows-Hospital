@@ -111,6 +111,8 @@ $(document).ready(function () {
   });
 });
 
+
+
 // This is for highlighting a row in the table whenever a user clicks an item (patient-table)
 document.addEventListener("DOMContentLoaded", () => {
   const tableBody = document.querySelector(".patient-table tbody");
@@ -129,79 +131,332 @@ document.addEventListener("DOMContentLoaded", () => {
         // Add 'selected' class to the clicked row
         row.classList.add("selected");
 
-        // Show the container
+        // Show the container (edit form)
         if (accordionContent) {
           accordionContent.style.maxHeight = "fit-content";
         }
         if (container) {
           container.style.display = "block";
         }
+
+        // Get patient_num from data attribute
+        const patientNum = row.dataset.patientNum;  // Make sure patient_num is set in the row's data attribute
+
+        // Load patient data
+        loadPatientData(patientNum);
       }
     });
   }
-});
 
-// manage_patients.js
-document.addEventListener("DOMContentLoaded", function () {
-  const searchInput = document.querySelector(".search-input");
-  const tableRows = document.querySelectorAll(".patient-table tbody tr");
 
-  // Search functionality
-  searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase();
-    tableRows.forEach((row) => {
-      row.style.display = row.textContent.toLowerCase().includes(query)
-        ? ""
-        : "none";
+  
+  // INSERTING PATIENT DATA IN THE TABLE
+  const insertPatientIntoTable = (patient) => {
+    console.log('Inserting patient:', patient);
+    const tableBody = document.querySelector('.patient-table tbody');
+    const row = document.createElement('tr');
+    row.classList.add('patient-row');
+    row.dataset.patientNum = patient.patient_num;
+  
+    row.innerHTML = `
+      <td>${patient.patient_num}</td>
+      <td>${patient.full_name}</td>
+      <td>${patient.gender}</td>
+      <td>${patient.address}</td>
+      <td>${patient.m_status}</td>
+      <td>${patient.phone_num}</td>
+      <td>${patient.date_of_birth}</td>
+      <td>${patient.date_registered}</td>
+      <td>${patient.next_of_kin_name}</td>
+    `;
+  
+    row.addEventListener('click', () => {
+      loadPatientData(patient.patient_num);
     });
-  });
+  
+    tableBody.appendChild(row);
+  };
+  
+  
+  // FETCHING DATA FROM DATABASE
+  fetch('../php-fetch-forms/fetch-patients.php')
+   .then(response => response.json())
+   .then(data => {
+       console.log('Fetched Data:', data);
+       if (data && Array.isArray(data)) {
+         data.forEach(patient => insertPatientIntoTable(patient));
+       } else {
+         console.error('Invalid data format');
+       }
+   })
+   .catch(error => console.error('Error fetching patients:', error));
 
-  // Sort functionality
-  const sortSelect = document.getElementById("sort-select");
-  const tbody = document.querySelector(".patient-table tbody");
+  
 
-  sortSelect.addEventListener("change", () => {
-    const rows = Array.from(tbody.querySelectorAll("tr"));
-    const columnIndex = sortSelect.selectedIndex - 1;
-
-    rows.sort((a, b) => {
-      const aText = a.children[columnIndex]?.textContent.trim();
-      const bText = b.children[columnIndex]?.textContent.trim();
-      return aText.localeCompare(bText, undefined, { numeric: true });
-    });
-
-    rows.forEach((row) => tbody.appendChild(row));
-  });
-
-  // Fetch patient data from the server
-  fetch("../php-fetch-forms/fetch-patients.php")
+// INSERTING DATA IN EDIT FORM 
+const loadPatientData = (patientNum) => {
+  fetch(`../php-fetch-forms/fetch-patients-edit.php?patient_num=${patientNum}`)
     .then((response) => response.json())
     .then((data) => {
-      const tableBody = document.querySelector(".patient-table tbody");
-      data.forEach((patient) => {
-        const row = document.createElement("tr");
+      console.log(data);  // Log the response to check if it's correct
 
-        row.innerHTML = `
-                    <td>${patient.clinic_num || "N/A"}</td>
-                    <td>${patient.full_name || "N/A"}</td>
-                    <td>${patient.gender || "N/A"}</td>
-                    <td>${patient.address || "N/A"}</td>
-                    <td>${patient.m_status || "N/A"}</td>
-                    <td>${patient.phone_num || "N/A"}</td>
-                    <td>${patient.date_of_birth || "N/A"}</td>
-                    <td>${patient.date_registered || "N/A"}</td>
-                    <td>${
-                      patient.next_of_kin_name
-                        ? patient.next_of_kin_name +
-                          " (" +
-                          patient.relationship +
-                          ")"
-                        : "N/A"
-                    }</td>
-                `;
+      if (data.error) {
+        console.error(data.error);
+      } else {
+        // Fill patient information in the form
+        document.getElementById("patient-number").value = data.patient.patient_num || ''; // Check for undefined
+        document.getElementById("first-name").value = data.patient.first_name || ''; 
+        document.getElementById("last-name").value = data.patient.last_name || ''; 
+        document.getElementById("address").value = data.patient.address || ''; 
+        document.getElementById("tel-number").value = data.patient.phone_num || ''; 
+        document.getElementById("sex").value = data.patient.gender || ''; 
+        document.getElementById("dob").value = data.patient.date_of_birth || ''; 
+        document.getElementById("marital-status").value = data.patient.m_status || ''; 
 
-        tableBody.appendChild(row);
-      });
+        // Set current date for Date Registered (non-editable)
+        document.getElementById("date-registered").value = new Date().toISOString().split('T')[0]; // Current date
+        document.getElementById("date-registered").setAttribute("readonly", "true");  // Make it readonly
+
+        // Fill next-of-kin information
+        const nextOfKin = data.next_of_kin ? `${data.next_of_kin.first_name} ${data.next_of_kin.last_name} (${data.next_of_kin.relationship})` : "N/A";
+        document.getElementById("next-of-kin").value = nextOfKin;
+
+        // Make next-of-kin readonly
+        document.getElementById("next-of-kin").setAttribute("readonly", "true");
+      }
     })
     .catch((error) => console.error("Error fetching patient data:", error));
+};
+
+
+
+
+// UPDATE FUNCTION IN EDIT FORM 
+const editBtn = document.getElementById("conduct-appointment-btn");
+if (editBtn) {
+  editBtn.addEventListener("click", (event) => {
+    // Prevent form submission
+    event.preventDefault();
+
+    // Check if the required fields are filled
+    const patientNum = document.getElementById("patient-number").value;
+    const firstName = document.getElementById("first-name").value;
+    const lastName = document.getElementById("last-name").value;
+    const address = document.getElementById("address").value;
+    const telNumber = document.getElementById("tel-number").value;
+    const sex = document.getElementById("sex").value;
+    const dob = document.getElementById("dob").value;
+    const maritalStatus = document.getElementById("marital-status").value;
+    const nextOfKin = document.getElementById("next-of-kin").value; // Add this line
+
+    if (!firstName || !lastName || !address || !telNumber || !sex || !dob || !maritalStatus) {
+      alert("Please fill all the required fields!");
+      return; // Prevent form submission
+    }
+
+    // Collect data for submission if all fields are filled
+    const patientData = {
+      patient_num: patientNum,
+      first_name: firstName,
+      last_name: lastName,
+      address: address,
+      phone_num: telNumber,
+      gender: sex,
+      date_of_birth: dob,
+      m_status: maritalStatus,
+      date_registered: document.getElementById("date-registered").value,
+      next_of_kin: nextOfKin, // Include Next-of-Kin here
+    };
+
+    // Perform the data update request
+    fetch('../data-submissions/submission-form-update-patient.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(patientData),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.success) {
+        alert("Patient data updated successfully!");
+
+        // Dynamically update the table row with the updated data
+        updatePatientRow(patientData);
+
+        // Close the form after successful update
+        closeEditForm();
+      } else {
+        alert("Failed to update patient data.");
+      }
+    })
+    .catch((error) => console.error("Error updating patient data:", error));
+  });
+}
+
+
+// UPDATE THE TABLE WITH THE EDITED DATA
+const updatePatientRow = (updatedData) => {
+  const row = document.querySelector(`tr[data-patient-num="${updatedData.patient_num}"]`);
+
+  if (row) {
+    // Update each cell with the updated data based on the correct column order
+    row.cells[0].textContent = updatedData.patient_num; // Patient #
+    row.cells[1].textContent = `${updatedData.first_name} ${updatedData.last_name}`; // Patient Name
+    row.cells[2].textContent = updatedData.gender; // Sex
+    row.cells[3].textContent = updatedData.address; // Address
+    row.cells[4].textContent = updatedData.m_status; // Marital Status
+    row.cells[5].textContent = updatedData.phone_num; // Tel. Number
+    row.cells[6].textContent = updatedData.date_of_birth; // Date of Birth
+    row.cells[7].textContent = updatedData.date_registered; // Date Registered
+
+    // Set Next-of-Kin to the correct value
+    const nextOfKin = updatedData.next_of_kin || "N/A";
+    row.cells[8].textContent = nextOfKin; // Next-of-Kin (Assumed value if available)
+  }
+};
+
+// Function to close the edit form
+const closeEditForm = () => {
+  const editForm = document.getElementById("edit-form");
+  if (editForm) {
+    editForm.style.display = "none"; // or use any other method to hide the form, such as modal closing
+  }
+};
 });
+
+
+
+
+// SEARCH AND SORT FUNCTION
+document.addEventListener('DOMContentLoaded', function() {
+  // Ensure everything is loaded before attaching search and sort functionality
+  attachSearchAndSort();
+});
+
+function attachSearchAndSort() {
+  const tableBody = document.querySelector('.patient-table tbody');
+  
+  // Attach search event listener
+  const searchInput = document.querySelector('.search-input');
+  searchInput.addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    const rows = tableBody.querySelectorAll("tr");
+    let hasMatch = false;
+
+    rows.forEach((row) => {
+      const cells = row.querySelectorAll("td");
+      const matches = Array.from(cells).some((cell) =>
+        cell.textContent.toLowerCase().includes(query)
+      );
+      if (matches) {
+        row.style.display = ""; // Show matching rows
+        hasMatch = true;
+      } else {
+        row.style.display = "none"; // Hide non-matching rows
+      }
+    });
+
+    // Show or hide the "No patients available" row
+    let noPatientRow = tableBody.querySelector(".no-patient-row");
+    if (!noPatientRow) {
+      noPatientRow = document.createElement("tr");
+      noPatientRow.classList.add("no-patient-row");
+      noPatientRow.innerHTML = `<td colspan="9" style="text-align: center; padding: 10px;">No patients available</td>`;
+      tableBody.appendChild(noPatientRow);
+    }
+
+    // Toggle the visibility of the "No patients available" row
+    if (hasMatch) {
+      noPatientRow.style.display = "none"; // Hide the "No patients available" row if there are matches
+    } else {
+      noPatientRow.style.display = ""; // Show the "No patients available" row if no matches
+    }
+  });
+
+  // Attach sort event listener
+  const sortSelect = document.getElementById("sort-select");
+  if (sortSelect) {
+    sortSelect.addEventListener("change", function () {
+      const sortBy = this.value;
+      const rows = Array.from(tableBody.querySelectorAll("tr"));
+
+      let sortedRows;
+
+      switch (sortBy) {
+        case "patient-number":
+          sortedRows = rows.sort((a, b) => {
+            const aValue = a.querySelector("td:nth-child(1)") ? a.querySelector("td:nth-child(1)").textContent.trim() : '';
+            const bValue = b.querySelector("td:nth-child(1)") ? b.querySelector("td:nth-child(1)").textContent.trim() : '';
+            return parseInt(aValue) - parseInt(bValue); // Sorting numerically for patient number
+          });
+          break;
+        case "patient-name":
+          sortedRows = rows.sort((a, b) => {
+            const aValue = a.querySelector("td:nth-child(2)") ? a.querySelector("td:nth-child(2)").textContent.trim() : '';
+            const bValue = b.querySelector("td:nth-child(2)") ? b.querySelector("td:nth-child(2)").textContent.trim() : '';
+            return aValue.localeCompare(bValue); // Sorting alphabetically for patient name
+          });
+          break;
+        case "patient-sex":
+          sortedRows = rows.sort((a, b) => {
+            const aValue = a.querySelector("td:nth-child(3)") ? a.querySelector("td:nth-child(3)").textContent.trim() : '';
+            const bValue = b.querySelector("td:nth-child(3)") ? b.querySelector("td:nth-child(3)").textContent.trim() : '';
+            return aValue.localeCompare(bValue); // Sorting alphabetically for gender
+          });
+          break;
+        case "patient-addr":
+          sortedRows = rows.sort((a, b) => {
+            const aValue = a.querySelector("td:nth-child(4)") ? a.querySelector("td:nth-child(4)").textContent.trim() : '';
+            const bValue = b.querySelector("td:nth-child(4)") ? b.querySelector("td:nth-child(4)").textContent.trim() : '';
+            return aValue.localeCompare(bValue); // Sorting alphabetically for address
+          });
+          break;
+        case "patient-marital-status":
+          sortedRows = rows.sort((a, b) => {
+            const aValue = a.querySelector("td:nth-child(5)") ? a.querySelector("td:nth-child(5)").textContent.trim() : '';
+            const bValue = b.querySelector("td:nth-child(5)") ? b.querySelector("td:nth-child(5)").textContent.trim() : '';
+            return aValue.localeCompare(bValue); // Sorting alphabetically for marital status
+          });
+          break;
+        case "patient-tel-num":
+          sortedRows = rows.sort((a, b) => {
+            const aValue = a.querySelector("td:nth-child(6)") ? a.querySelector("td:nth-child(6)").textContent.trim() : '';
+            const bValue = b.querySelector("td:nth-child(6)") ? b.querySelector("td:nth-child(6)").textContent.trim() : '';
+            return aValue.localeCompare(bValue); // Sorting alphabetically for phone number
+          });
+          break;
+        case "patient-dob":
+          sortedRows = rows.sort((a, b) => {
+            const aValue = a.querySelector("td:nth-child(7)") ? a.querySelector("td:nth-child(7)").textContent.trim() : '';
+            const bValue = b.querySelector("td:nth-child(7)") ? b.querySelector("td:nth-child(7)").textContent.trim() : '';
+            return new Date(aValue) - new Date(bValue); // Sorting by Date of Birth
+          });
+          break;
+        case "date-registered":
+          sortedRows = rows.sort((a, b) => {
+            const aValue = a.querySelector("td:nth-child(8)") ? a.querySelector("td:nth-child(8)").textContent.trim() : '';
+            const bValue = b.querySelector("td:nth-child(8)") ? b.querySelector("td:nth-child(8)").textContent.trim() : '';
+            return new Date(aValue) - new Date(bValue); // Sorting by Date Registered
+          });
+          break;
+        case "next-of-kin":
+          sortedRows = rows.sort((a, b) => {
+            const aValue = a.querySelector("td:nth-child(9)") ? a.querySelector("td:nth-child(9)").textContent.trim() : '';
+            const bValue = b.querySelector("td:nth-child(9)") ? b.querySelector("td:nth-child(9)").textContent.trim() : '';
+            return aValue.localeCompare(bValue); // Sorting alphabetically for next of kin
+          });
+          break;
+        default:
+          sortedRows = rows; // If no sort option is selected, just return the rows as they are
+      }
+
+      // Reinsert sorted rows into the table body
+      sortedRows.forEach(row => tableBody.appendChild(row)); 
+    });
+  }
+}
+
+
+
+

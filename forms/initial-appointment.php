@@ -32,7 +32,7 @@
                     </div>
 
                     <!-- Appointment Information -->
-                    <div class="accordion-item">
+                    <div class="accordion-item" id="initial-appointment-section">
                         <button class="accordion-header">Appointment Information</button>
                         <div class="accordion-content"> <br>
                             <h4>Appointment</h4> <br>
@@ -80,7 +80,7 @@
                     </div>
 
                     <!-- Conduct Examination -->
-                    <div class="accordion-item">
+                    <div class="accordion-item" id="conduct-appointments-form">
                         <button class="accordion-header">Conduct Appointments</button>
                         <div class="accordion-content"> <br>
                             <h4>Examination</h4> <br>
@@ -151,7 +151,10 @@
         </div>
     </div>
     <!-- JS Script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/ajax-initial-appointments.js"></script>  
+    <script src="../js/ajax-appointment-form-submission.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,12 @@
 {
-    "cSpell.words": [
-        "appt",
-        "bttns",
-        "Numof",
-        "pharma",
-        "qtty",
-        "Shenzheng",
-        "Wellmeadows"
-    ]
+  "cSpell.words": [
+    "appt",
+    "bttns",
+    "Numof",
+    "pharma",
+    "qtty",
+    "Shenzheng",
+    "Wellmeadows"
+  ],
+  "liveServer.settings.port": 5501
 }

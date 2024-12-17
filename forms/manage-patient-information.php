@@ -48,7 +48,7 @@
                                         <option value="patient-dob">Date of Birth</option>
                                         <option value="date-registered">Date Registered</option>
                                         <option value="next-of-kin">Next-of-Kin</option>
-                                        <option value="referred-local-doctor">Referred By</option>
+                                        
                                     </select>
                                 </div>
                             </div>
@@ -79,7 +79,7 @@
                             </div>
 
                             <!-- View and Update Container -->
-                            <div class="container2">
+                            <div class="container2" id="edit-form">
                                 <!-- Close Button -->
                                 <button class="close-btn" id="close-btn">x</button>
 
@@ -90,7 +90,7 @@
                                     <div class="column">
                                         <div class="row">
                                             <label for="patient-num">Patient Number</label>
-                                            <input type="number" id="patient-number" readonly style="margin-right: 20px;">
+                                            <input type="number" id="patient-number"  style="margin-right: 20px;">
                                         </div>
                                     </div>
                                 </div>
@@ -104,8 +104,8 @@
                                             <label for="patient-name">Patient Name</label>
                                         </div>
                                         <div class="row" style="width: 100%;">
-                                            <input type="text" id="first-name" value="Aldrin" readonly style="width: 300px;">
-                                            <input type="text" id="last-name" value="Said" readonly style="width: 300px;">
+                                            <input type="text" id="first-name" value="Aldrin" style="width: 300px;">
+                                            <input type="text" id="last-name" value="Said" style="width: 300px;">
                                         </div>
                                         <div class="row" style="width: 65%; margin-left: 120px; margin-top: -10px;">
                                             <label for="first-name" style="font-size: 12px; font-weight: normal;">First Name</label>
@@ -189,7 +189,7 @@
                                             <label for="date-registered">Date Registered</label>
                                         </div>
                                         <div class="row">
-                                            <input type="date" id="date-registered">
+                                            <input type="date" id="date-registered" readonly>
                                         </div>
                                     </div>
                                     <div class="column">
@@ -198,18 +198,10 @@
                                             <label for="next-of-kin">Next-of-Kin</label>
                                         </div>
                                         <div class="column">
-                                            <input type="text" id="next-of-kin" value="Colette Vergara-Said (ID: 00031)">
+                                            <input type="text" id="next-of-kin" value="Colette Vergara-Said (ID: 00031)" readonly>
                                         </div>
                                     </div>
-                                    <div class="column" style="margin-left: 30px;">
-                                        <!-- Referred By -->
-                                        <div class="row">
-                                            <label for="next-of-kin">Referred By</label>
-                                        </div>
-                                        <div class="column">
-                                            <input type="text" id="referred-by" value="N/A">
-                                        </div>
-                                    </div>
+                                    
                                 </div> <br>
                                 <div class="conduct-appointment-btn-container">
                                     <button type="button" id="conduct-appointment-btn">Edit</button>

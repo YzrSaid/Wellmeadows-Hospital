@@ -49,6 +49,8 @@
                                         <label for="units-per-day">Units Per Day</label>
                                         <select name="units-per-day" id="units-per-day">
                                             <option value="" disabled selected>Choose</option>
+                                            <option value="1" >1</option>
+                                            <option value="2" >2</option>
                                         </select>
                                     </div>
 
@@ -82,7 +84,7 @@
 
                                     <!-- Message (This will appear if the medicine/drug has no stocks-->
                                     <div class="row">
-                                        <p id="no-drug-available-message">The patient's ward does not have this drug in stock. To make a requisition, please <span><a href="create_requisition.php">click here.</a></span></p>
+                                        <p id="no-drug-available-message">The patient's ward does not have this drug in stock. To make a requisition, please <span><a href="create-requisition.php">click here.</a></span></p>
                                     </div>
                                 </div>
                             </div>
@@ -106,6 +108,8 @@
     </div>
     <!-- JS Script -->
     <script src="../js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/ajax-medication.js"></script>
 </body>
 
 </html>
